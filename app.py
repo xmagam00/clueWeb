@@ -122,7 +122,9 @@ if (len(options.folder) > 1):
     for i in range(0,len(fileList)):
         f = warc.open(fileList[i])
         paragraphs = justext.justext(f, justext.get_stoplist('English'))
-        
+        for i in range(0,len(paragraphs)):
+            h.write_record(paragraphs[i])
+        h.close()
         try:
             subprocess.call(['encodevert -c', fileList])
             subprocess.Popen(['encodevert -c'])
@@ -137,6 +139,10 @@ else:
     
     f = warc.open(options.file)
     paragraphs = justext.justext(f, justext.get_stoplist('English'))
+    h = warc.open(options.file, "w")
+    for i in range(0,len(paragraphs)):
+        h.write_record(paragraphs[i])
+    h.close()
     
     try:
         subprocess.call(['encodevert -c', options.file])
