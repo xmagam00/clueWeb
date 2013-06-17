@@ -11,6 +11,9 @@ import codecs
 import justext
 import os
 import warc
+import subprocess
+
+fileList=[]
 move_on=0
 tag_remove=0
 usage = "usage: %prog [options] arg"
@@ -119,9 +122,28 @@ if (len(options.folder) > 1):
     for i in range(0,len(fileList)):
         f = warc.open(fileList[i])
         paragraphs = justext.justext(f, justext.get_stoplist('English'))
+        
+        try:
+            subprocess.call(['encodevert -c', fileList])
+            subprocess.Popen(['encodevert -c'])
+            # thread continues ...
+            p.terminate()
+        except:
+            sys.stderr.write("Error in encodevert")
+            sys.exit(1)
 
 #bol zadany subor
 else:
     
     f = warc.open(options.file)
     paragraphs = justext.justext(f, justext.get_stoplist('English'))
+    
+    try:
+        subprocess.call(['encodevert -c', options.file])
+        subprocess.Popen(['encodevert -c'])
+        # thread continues ...
+        p.terminate()
+    except:
+        sys.stderr.write("Error in encodevert")
+        sys.exit(1)
+
