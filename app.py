@@ -119,37 +119,74 @@ if (move_on == 0):
 
 #bol zadany priecinok
 if (len(options.folder) > 1):
+    pom=""
+    pom_list=[]
     for i in range(0,len(fileList)):
         f = warc.open(fileList[i])
-        paragraphs = justext.justext(f, justext.get_stoplist('English'))
-        for i in range(0,len(paragraphs)):
-            h.write_record(paragraphs[i])
+        for record in f:
+            paragraphs = justext.justext(record, justext.get_stoplist('English'))
+            paragraphs = paragraphs.replace("<p>","")
+            paragraphs = paragraphs.replace("<h>","")
+            pom_list.append(paragraphs)
+        f = warc.open(options.file, "w")
+        for i in range(0,len(pom_list)):
+            f.write_record(pom_list[i])
         h.close()
+        korp="PATH"+ fileList[i]+ "\n" +
+        "VERTICAL"+fileList[i] + "\n" +
+        "ENCODING iso8859-2\n" +
+        "INFO"+ "\""+ subor +"\"" + "\n"+
+        "\n" +
+        "ATTRIBUTE word {\n" +
+        "   TYPE \"FD_FBD\"\n" +
+        "}\n" +
+        "\n" + 
+        "ATTRIBUTE lemma {\n" +
+        "   TYPE \"FD_FBD\"\n"+
+        "}"+
+        "\n"+
+        "ATTRIBUTE tag {\n"+
+        "   TYPE \"FD_FBD\"\n"+
+        "}\n"
         try:
-            subprocess.call(['encodevert -c', fileList])
-            subprocess.Popen(['encodevert -c'])
+            os.environ["MANATEE_REGISTRY"] = ""
+            os.environ["MANATEE_REGISTRY"]  = korp
+            subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c', fileList[i]])
+            subprocess.Popen(['/mnt/minerva1/nlp/local64/bin/encodevert','-c'])
             # thread continues ...
             p.terminate()
         except:
             sys.stderr.write("Error in encodevert")
             sys.exit(1)
 
+
+
 #bol zadany subor
 else:
-    
+    pom=""
+    pom_list=[]
     f = warc.open(options.file)
-    paragraphs = justext.justext(f, justext.get_stoplist('English'))
-    h = warc.open(options.file, "w")
-    for i in range(0,len(paragraphs)):
-        h.write_record(paragraphs[i])
+    for record in f:
+        paragraphs = justext.justext(record, justext.get_stoplist('English'))
+        paragraphs = paragraphs.replace("<p>","")
+        paragraphs = paragraphs.replace("<h>","")
+        pom_list.append(paragraphs)
+    f = warc.open(options.file, "w")
+    for i in range(0,len(pom_list)):
+        f.write_record(pom_list[i])
     h.close()
     
     try:
-        subprocess.call(['encodevert -c', options.file])
-        subprocess.Popen(['encodevert -c'])
+        os.environ["MANATEE_REGISTRY"] = ""
+        os.environ["MANATEE_REGISTRY"]  = korp
+        subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c', options.file])
+        subprocess.Popen(['/mnt/minerva1/nlp/local64/bin/encodevert','-c'])
         # thread continues ...
         p.terminate()
     except:
         sys.stderr.write("Error in encodevert")
         sys.exit(1)
+
+
+
 
