@@ -36,7 +36,7 @@ if (len(sys.argv) < 1):
 
 if (len(str(options.file)) < 1 or len(str(options.folder)) < 1):
     sys.stderr.write("Bad arguments")
-
+    sys.exit(1)
 options.folder=str(options.folder)
 pom_prem=str(options.folder)
 if (move_on == 0):
@@ -117,8 +117,8 @@ if (move_on == 0):
             sys.stderr.write("Neexistujuci subor/priecinok\n")
             sys.exit(1)
 
-#bol zadany priecinok
-if (len(options.folder) > 1):
+if (str(options.folder) != "None"):
+    
     pom=""
     pom_list=[]
     for i in range(0,len(fileList)):
@@ -158,14 +158,13 @@ if (len(options.folder) > 1):
         except:
             sys.stderr.write("Error in encodevert")
             sys.exit(1)
-
-
-
 #bol zadany subor
 else:
+    
     pom=""
     pom_list=[]
     f = warc.open(options.file)
+    
     for record in f:
         paragraphs = justext.justext(record, justext.get_stoplist('English'))
         paragraphs = paragraphs.replace("<p>","")
