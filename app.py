@@ -3,7 +3,7 @@
 """
 Autor: Martin Maga
 Popis: ClueWeb
-
+Skript odstrani html tagy a naindexuje data pomocou mantee
 """
 import sys
 from optparse import OptionParser
@@ -132,22 +132,22 @@ if (len(options.folder) > 1):
         for i in range(0,len(pom_list)):
             f.write_record(pom_list[i])
         h.close()
-        korp="PATH"+ fileList[i]+ "\n" +
-        "VERTICAL"+fileList[i] + "\n" +
-        "ENCODING iso8859-2\n" +
-        "INFO"+ "\""+ subor +"\"" + "\n"+
-        "\n" +
-        "ATTRIBUTE word {\n" +
-        "   TYPE \"FD_FBD\"\n" +
-        "}\n" +
-        "\n" + 
-        "ATTRIBUTE lemma {\n" +
-        "   TYPE \"FD_FBD\"\n"+
-        "}"+
-        "\n"+
-        "ATTRIBUTE tag {\n"+
-        "   TYPE \"FD_FBD\"\n"+
-        "}\n"
+        korp="PATH"+ fileList[i]+ "\n"
+        + "VERTICAL"+fileList[i] + "\n"
+        + "ENCODING iso8859-2\n"
+        + "INFO"+ "\""+ subor +"\"" + "\n"
+        + "\n"
+        + "ATTRIBUTE word {\n"
+        + "   TYPE \"FD_FBD\"\n"
+        + "}\n"
+        + "\n"
+        + "ATTRIBUTE lemma {\n"
+        + "   TYPE \"FD_FBD\"\n"
+        + "}\n"
+        + "\n"
+        + "ATTRIBUTE tag {\n"
+        + "   TYPE \"FD_FBD\"\n"
+        + "}\n"
         try:
             os.environ["MANATEE_REGISTRY"] = ""
             os.environ["MANATEE_REGISTRY"]  = korp
