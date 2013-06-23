@@ -13,6 +13,12 @@ import os
 import warc
 import subprocess
 
+
+
+
+
+
+
 fileList=[]
 move_on=0
 tag_remove=0
@@ -28,9 +34,14 @@ parser.add_option("--folder", dest="folder",
                   help="Name of folder from which will be files from ClueWeb recursively processed",
                   type="string", metavar="FOLDER")
 
+
+parser.add_option("--output", dest="output",
+                  help="Name of folder where result file will be saved",
+                  type="string", metavar="FOLDER")
+
 (options, args) = parser.parse_args()
 
-if (len(sys.argv) < 1):
+if (len(sys.argv) < 3):
     sys.stderr.write("Bad amount of arguments")
     sys.exit(1)
 
@@ -117,6 +128,11 @@ if (move_on == 0):
             sys.stderr.write("Neexistujuci subor/priecinok\n")
             sys.exit(1)
 
+
+
+
+
+
 if (str(options.folder) != "None"):
     
     pom=""
@@ -132,8 +148,8 @@ if (str(options.folder) != "None"):
         for i in range(0,len(pom_list)):
             f.write_record(pom_list[i])
         h.close()
-        korp="PATH"+ fileList[i]+ "\n"
-        + "VERTICAL"+fileList[i] + "\n"
+        korp="PATH  "+ fileList[i]+ "\n"
+        + "VERTICAL "+str(options.output) + "\n"
         + "ENCODING iso8859-2\n"
         + "INFO"+ "\""+ subor +"\"" + "\n"
         + "\n"
@@ -160,9 +176,11 @@ if (str(options.folder) != "None"):
             sys.exit(1)
 #bol zadany subor
 else:
-    
+    pathname=""
+    kam=""
     pom=""
     pom_list=[]
+    """
     f = warc.open(options.file)
     
     for record in f:
@@ -170,22 +188,43 @@ else:
         paragraphs = paragraphs.replace("<p>","")
         paragraphs = paragraphs.replace("<h>","")
         pom_list.append(paragraphs)
-    f = warc.open(options.file, "w")
+    h = warc.open(options.file, "w")
     for i in range(0,len(pom_list)):
         f.write_record(pom_list[i])
     h.close()
+    f.close()
+    """
+    try:
+        subor = codecs.open("vert.korp", "w", "utf-8")
+    except IOError:
+        sys.stderr.write("Nemozno vytvorit korpus subor pre endodevert\n")
+    
+    folder_name=""
+    pathname = os.path.dirname(sys.argv[0])        
+    if (str(options.file).find("/") == -1):
+            options.file=str(options.file)
+            options.file=str(os.getcwd())+ "/"+options.file
+    
+    
     
     try:
-        os.environ["MANATEE_REGISTRY"] = ""
-        os.environ["MANATEE_REGISTRY"]  = korp
-        subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c', options.file])
-        subprocess.Popen(['/mnt/minerva1/nlp/local64/bin/encodevert','-c'])
-        # thread continues ...
-        p.terminate()
+        os.makedirs(options.output)
     except:
-        sys.stderr.write("Error in encodevert")
+        sys.stderr.write("Chyba pri vytvarani priecinka\n")
+        sys.exit(0)
+    kam = os.path.abspath(pathname)
+    moje=""
+    moje="PATH  "+ str(options.output) + "\n" + "VERTICAL " + str(options.file)  + "\nENCODING iso8859-2\n" + "INFO "+ "\""+ "vert.korp" +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}"
+    subor.write(moje)
+    
+    try:
+        subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c', str(options.file)])
+    except:
+        sys.stderr.write("Error in encodevert\n")
+        os.remove("vert.korp")
         sys.exit(1)
-
-
+    subor.close()
+    os.remove("vert.korp")
+sys.exit(0)
 
 
