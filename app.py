@@ -5,6 +5,7 @@ Autor: Martin Maga
 Popis: ClueWeb
 Skript odstrani html tagy a naindexuje data pomocou mantee
 """
+from warc import WARCReader, WARCHeader, WARCRecord, WARCFile
 import sys
 from optparse import OptionParser
 import codecs
@@ -12,11 +13,7 @@ import justext
 import os
 import warc
 import subprocess
-
-
-
-
-
+import gzip
 
 
 fileList=[]
@@ -180,26 +177,81 @@ else:
     kam=""
     pom=""
     pom_list=[]
-    """
-    f = warc.open(options.file)
-    
-    for record in f:
-        paragraphs = justext.justext(record, justext.get_stoplist('English'))
-        paragraphs = paragraphs.replace("<p>","")
-        paragraphs = paragraphs.replace("<h>","")
-        pom_list.append(paragraphs)
-    h = warc.open(options.file, "w")
-    for i in range(0,len(pom_list)):
-        f.write_record(pom_list[i])
-    h.close()
-    f.close()
-    """
+    g=""
+    slov=dict()
+    ind=0
     try:
-        subor = codecs.open("vert.korp", "w", "utf-8")
+        subprocess.call(['gunzip', str(options.file)])
+    except: 
+        pass
+    index=0
+    zoznam=[]
+    index=str(os.path.basename(options.file)).find(".")
+    file_name=""
+    file_name=(str(options.file))[:index]
+    file_name=file_name+".warc"
+    html=""
+    pom=""
+    f= codecs.open(file_name,"rb","ISO8859-15")
+    while (0==0):
+        
+        moje = f.readline()
+        
+        if not moje: break
+        moje=unicode(moje)
+        if (moje.find("WARC/1.0") != -1):
+            if (len(html) > 0):
+               
+                
+                paragraphs = justext.justext(unicode(html).encode("utf-8"), justext.get_stoplist('English'))
+                for paragraph in paragraphs:
+                    pom =  paragraph['text']
+                    zoznam.append(pom)
+            html=""
+            slov[ind]=zoznam
+            pom=""
+            zoznam.append(moje)
+            
+            while(0==0):
+                moje=f.readline()
+            
+              
+                if (moje.find("!DOCTYPE") != -1):
+                    html=html+moje
+                    break
+                else:
+                    zoznam.append(moje)
+            slov[ind]=zoznam
+            
+            ind=ind+1
+            zoznam=[]
+        else:
+            html=html+unicode(moje)
+            #aragraphs = justext.justext(record, justext.get_stoplist('English'))
+            #paragraphs = paragraphs.replace("<p>","")
+            #paragraphs = paragraphs.replace("<h>","")
+    p = codecs.open(file_name,"w")
+    for i in range(0,len(slov)):
+        for h in range(0,9):
+            p.write((slov[i][h]).encode('utf-8'))
+    p.close()
+    
+    try:
+        subprocess.call(['gzip',  file_name])
+    except: 
+        pass
+    
+    
+    try:
+        subor = codecs.open("vert.korp", "w")
     except IOError:
         sys.stderr.write("Nemozno vytvorit korpus subor pre endodevert\n")
     
     folder_name=""
+    index=0
+    index=str(os.path.basename(options.file)).find(".")
+    folder_name=str(os.path.basename(options.file))[:index]
+  
     pathname = os.path.dirname(sys.argv[0])        
     if (str(options.file).find("/") == -1):
             options.file=str(options.file)
@@ -208,15 +260,15 @@ else:
     
     
     try:
-        os.makedirs(options.output)
+        os.makedirs(options.output+"/"+folder_name)
     except:
-        sys.stderr.write("Chyba pri vytvarani priecinka\n")
-        sys.exit(0)
+        pass
+  
     kam = os.path.abspath(pathname)
     moje=""
-    moje="PATH  "+ str(options.output) + "\n" + "VERTICAL " + str(options.file)  + "\nENCODING iso8859-2\n" + "INFO "+ "\""+ "vert.korp" +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}"
+    moje="PATH  "+ "/"+str(options.output)+"/"+folder_name  + "\n" + "VERTICAL " + str(options.file)  + "\nENCODING iso8859-2\n" + "INFO "+ "\""+ str(os.path.basename(options.file)) +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}"
     subor.write(moje)
-    
+    sys.exit(0)
     try:
         subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c', str(options.file)])
     except:

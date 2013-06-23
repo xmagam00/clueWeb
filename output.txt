@@ -1,0 +1,274 @@
+WARC/1.0
+WARC-Type: warcinfo
+WARC-Date: 2012-02-12T07:08:41Z
+WARC-Filename: 0000tw-49.warc.gz
+WARC-Number-of-Documents: 332
+WARC-File-Length: 22670545
+WARC-Data-Type: twitter links
+WARC-Record-ID: <urn:uuid:5dc77e05-3c26-4af5-814b-106522f7cd5e>
+Content-Type: application/warc-fields
+Content-Length: 283
+
+software: Heritrix/3.1.1-SNAPSHOT-20120210.102032 http://crawler.archive.org
+format: WARC File Format 1.0
+conformsTo: http://bibnum.bnf.fr/WARC/WARC_ISO_28500_version1_latestdraft.pdf
+isPartOf: ClueWeb12
+description:  The Lemur Project's ClueWeb12 dataset (http://lemurproject.org/)
+
+
+WARC/1.0
+WARC-Type: response
+WARC-Date: 2012-02-12T11:15:07Z
+WARC-TREC-ID: clueweb12-0000tw-49-00000
+WARC-IP-Address: 98.129.229.172
+WARC-Payload-Digest: sha1:T3GINWJ4IJUGRKAMWIUPK6GSHZOU22AU
+WARC-Target-URI: http://www.simplyzesty.com/social-media/competition-win-discounted-tickets-to-the-next-web-conference-in-amsterdam/
+WARC-Record-ID: <urn:uuid:153bee0f-d566-491b-a239-b7842bacaa46>
+Content-Type: application/http; msgtype=response
+Content-Length: 32910
+
+HTTP/1.0 200 OK
+Server: Apache/2.2
+Content-Type: text/html; charset=UTF-8
+Date: Sun, 12 Feb 2012 11:15:07 GMT
+X-Pingback: http://www.simplyzesty.com/xmlrpc.php
+Link: <http://www.simplyzesty.com/?p=45892>; rel=shortlink
+Connection: close
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>  Competition &#8211; Win Discounted Tickets to The Next Web Conference in Amsterdam &#8211; Simply Zesty - Simply Zesty</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="google-site-verification" content="d8NLPmtgsNN2l1PhVlcwyI093A63gcX4SqJCKivnpao" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic&v2">
+<link rel="stylesheet" href="http://www.simplyzesty.com/wp-content/themes/sz-2012/style.css" type="text/css" media="screen" />
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.1.2 - http://yoast.com/wordpress/seo/ -->
+<link rel="canonical" href="http://www.simplyzesty.com/social-media/competition-win-discounted-tickets-to-the-next-web-conference-in-amsterdam/" />
+<!-- / Yoast WordPress SEO plugin. -->
+
+				
+	<script type="text/javascript">//<![CDATA[
+	// Google Analytics for WordPress by Yoast v4.2.2 | http://yoast.com/wordpress/google-analytics/
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount','UA-11059530-1']);
+	_gaq.push(['_setDomainName','simplyzesty.com'],['_setCustomVar',1,'author','lauren-fisher',3],['_setCustomVar',2,'year','2012',3],['_setCustomVar',3,'category','social-media',3],['_trackPageview'],['_trackPageLoadTime']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	//]]></script>
+<link rel="alternate" type="application/rss+xml" title="Simply Zesty &raquo; Competition &#8211; Win Discounted Tickets to The Next Web Conference in Amsterdam Comments Feed" href="http://www.simplyzesty.com/social-media/competition-win-discounted-tickets-to-the-next-web-conference-in-amsterdam/feed/" />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.simplyzesty.com/wp-content/plugins/contact-form-7/styles.css?ver=3.0.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='http://www.simplyzesty.com/wp-content/themes/sz-2012/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<script type='text/javascript' src='http://platform.twitter.com/anywhere.js?id=UxNimVUWXVqhJ3d2tWza1w&#038;v=1&#038;ver=3.3.1'></script>
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js?ver=1.6'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.simplyzesty.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.simplyzesty.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.3.1" />
+<link rel='shortlink' href='http://www.simplyzesty.com/?p=45892' />
+<!-- HeadSpace SEO 3.6.37 by John Godley - urbangiraffe.com -->
+<meta name="description" content="Our friends over at The Next Web have kindly given us five discounted tickets to their conference in Amsterdam to give away to you lovely people! This" />
+<meta name="keywords" content="amsterdam conference,chad hurley,kevin rose,simply zesty,social media,social media conference,the next web,the next web conference,tnw conference" />
+<!-- HeadSpace -->
+<link rel="stylesheet" href="http://www.simplyzesty.com/wp-content/plugins/mm-forms/stylesheet.css" type="text/css" /><link rel="stylesheet" href="http://www.simplyzesty.com/wp-content/plugins/mm-forms/calendar.css" type="text/css" />
+	
+<script type="text/javascript">twttr.anywhere(onAnywhereLoad);function onAnywhereLoad(twitter) { twitter.hovercards(); }</script><script type="text/javascript" src="http://www.simplyzesty.com/wp-content/themes/sz-2012/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="http://www.simplyzesty.com/wp-content/themes/sz-2012/js/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="http://www.simplyzesty.com/wp-content/themes/sz-2012/js/jquery.restorable.js"></script>
+<script type="text/javascript" src="http://www.simplyzesty.com/wp-content/themes/sz-2012/js/sz.js"></script>
+
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+  <script type="text/javascript" src="http://platform.linkedin.com/in.js"></script>
+  <script type="text/javascript" src="http://apis.google.com/js/plusone.js" gapi_processed="true"></script>
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://simplyzesty.disqus.com/latest.rss" />
+<link rel="alternate" type="text/xml" title="RSS .92" href="http://simplyzesty.disqus.com/latest.rss" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://simplyzesty.disqus.com/latest.rss" />
+
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--[if IE 6]>
+<link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.0.3.css" media="screen, projection">
+<![endif]-->
+
+
+</head>
+
+<!--[if lt IE 7 ]> <body class="single single-post postid-45892 single-format-standard ie ie6"> <![endif]-->
+<!--[if IE 7 ]>    <body class="single single-post postid-45892 single-format-standard ie ie7"> <![endif]-->
+<!--[if IE 8 ]>    <body class="single single-post postid-45892 single-format-standard ie ie8"> <![endif]-->
+<!--[if IE 9 ]>    <body class="single single-post postid-45892 single-format-standard ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <body class="single single-post postid-45892 single-format-standard"> <!--<![endif]-->
+
+
+
+<section id="topnav">
+	
+	<ul id="topmenu">
+		<li class="selected"><a href="http://www.simplyzesty.com" title="">Simply Zesty</a></li>
+		<li><a href="http://www.simplyzesty.com/agency/" title="">SZ Agency</a></li>
+		<li><a href="http://training.simplyzesty.com/" title="">SZ Pro</a></li>
+		<li><a href="http://www.simplyzesty.com/speaking/" title="">SZ Speaking</a></li>
+		<li><a href="http://www.simplyzesty.com/training/" title="">SZ Training</a></li>	
+	</ul>
+	
+	<ul class="snlinks">
+	        <li class="fblink"><a href="http://www.facebook.com/SimplyZesty" rel="external" target="_blank">Facebook</a></li>
+	        <li class="twitlink"><a href="http://www.twitter.com/SimplyZesty" rel="external" target="_blank">Twitter</a></li>
+	        <li class="ytlink"><a href="http://www.youtube.com/simplyzesty" rel="external" target="_blank">Youtube</a></li>
+	        <li class="feedlink"><a href="http://feeds.feedburner.com/SimplyZesty" rel="external" target="_blank">RSS Feed</a></li>
+   </ul>
+    	
+	
+</section>
+<section id="container">
+
+	<header role="banner">
+	
+		<h1 id="logo"><a href="http://www.simplyzesty.com" title="Simply Zesty"><img src="http://www.simplyzesty.com/wp-content/themes/sz-2012/images/logo.png" alt="SZ Logo" /></a></h1>
+		
+		<form role="search" method="get" id="searchform" action="http://www.simplyzesty.com/">
+	<input type="text" name="s" id="s" value="Search &hellip;" class="default-value" />
+	<input type="submit" name="submit" id="searchsubmit"  value="Search"/>
+</form>	</header>
+	
+	<section id="mainmenu">
+		<ul id="menu-main-menu" class=""><li id="menu-item-25764" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-25764"><a href="http://www.simplyzesty.com/category/social-media/" >Social Media</a></li>
+<li id="menu-item-25765" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25765"><a href="http://www.simplyzesty.com/category/facebook/" >Facebook</a></li>
+<li id="menu-item-25767" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25767"><a href="http://www.simplyzesty.com/category/google/" >Google</a></li>
+<li id="menu-item-25766" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25766"><a href="http://www.simplyzesty.com/category/technology/" >Technology</a></li>
+<li id="menu-item-25827" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25827"><a href="http://www.simplyzesty.com/category/advertising-and-marketing/" >Advertising &#038; Marketing</a></li>
+<li id="menu-item-25769" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25769"><a href="http://www.simplyzesty.com/category/mobile/" >Mobile</a></li>
+<li id="menu-item-25770" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25770"><a href="http://www.simplyzesty.com/category/video/" >Video</a></li>
+<li id="menu-item-18551" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-18551"><a href="http://www.simplyzesty.com/category/viralvideos/" >Simply Viral</a></li>
+</ul>	</section>	
+	<section id="content">
+	
+		
+	<div id="main">
+		
+				
+		<div class="post-45892 post type-post status-publish format-standard hentry category-social-media tag-amsterdam-conference tag-chad-hurley tag-kevin-rose tag-simply-zesty tag-social-media tag-social-media-conference tag-the-next-web tag-the-next-web-conference tag-tnw-conference">
+      		
+      		<div class="post-content">
+      				<h1>Competition &#8211; Win Discounted Tickets to The Next Web Conference in Amsterdam</h1>
+      	
+					<div class="post-meta">
+					
+					 	
+						<span><a href="http://www.simplyzesty.com/category/social-media/" title="View all posts in Social Media" rel="category tag">Social Media</a></span> 
+						<span>February 9, 2012</span> 
+						<span><a href="http://www.simplyzesty.com/social-media/competition-win-discounted-tickets-to-the-next-web-conference-in-amsterdam/#comments" rel="nofollow" title="Comment on Competition &#8211; Win Discounted Tickets to The Next Web Conference in Amsterdam"><span class="dsq-postid" rel="45892 http://www.simplyzesty.com/?p=45892">4 Comments</span></a></span>
+						
+											 	<span><a href="https://twitter.com/laurenfisher" data-show-count="false" class="twitter-follow-button">@laurenfisher</a></span>
+					  					</div>
+					
+					<div class="post-social">
+
+	     				<span class="sb_google">
+	     					<g:plusone size="medium" href="http://www.simplyzesty.com/social-media/competition-win-discounted-tickets-to-the-next-web-conference-in-amsterdam/"></g:plusone>
+	     				</span> 
+	     				
+	     				<span class="sb_linkedin">
+	     					<script type="in/share" data-url="http://www.simplyzesty.com/social-media/competition-win-discounted-tickets-to-the-next-web-conference-in-amsterdam/" data-counter="right"></script>
+	     				</span> 
+	     				
+	     				<span class="sb_twitter">
+	     					<a href="http://twitter.com/share" class="twitter-share-button" data-text="Competition &#8211; Win Discounted Tickets to The Next Web Conference in Amsterdam" data-url="http://www.simplyzesty.com/social-media/competition-win-discounted-tickets-to-the-next-web-conference-in-amsterdam/" data-count="horizontal" data-via="simplyzesty" data-related="simplyzesty">Tweet</a> 
+	     				</span>
+	     				
+	     				<span class="sb_facebook">
+				          <iframe src="http://www.facebook.com/plugins/like.php?href=http://www.simplyzesty.com/social-media/competition-win-discounted-tickets-to-the-next-web-conference-in-amsterdam/&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowTransparency="true"></iframe>
+	          			</span>
+          			
+          			</div>
+          			
+     
+
+			  
+
+					  
+
+				     <p><a href="http://www.simplyzesty.com/social-media/competition-win-discounted-tickets-to-the-next-web-conference-in-amsterdam/attachment/screen-shot-2012-02-09-at-12-29-03/"  rel="attachment wp-att-45909"><img class="alignleft  wp-image-45909" title="The Next Web Conference" src="http://simplyzesty.com/wp-content/uploads//2012/02/Screen-shot-2012-02-09-at-12.29.03.png" alt="" width="341" height="154" /></a>Our friends over at <a href="http://thenextweb.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://thenextweb.com']);" target="_blank">The Next Web</a> have kindly given us five discounted tickets to<a href="http://thenextweb.com/conference/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://thenextweb.com']);" target="_blank"> their conference</a> in Amsterdam to give away to you lovely people! This is the 7th conference from <em>The Next Web</em> and it&#8217;s definitely established itself as one not to miss.</p>
+<p>This year&#8217;s speakers so far include Kevin Rose (founder of Digg, angel investor, entrepeneur), Chad Hurley (founder of Youtube, CEO of Delicious), Alexis Ohanian (co-founder of Reddit) and Susan Crawford (professor in New York). There&#8217;s also lots of other cool events at the conference, including a startup rally and hack battle. And of course, you get an excuse to visit one of the most amazing cities on the planet.</p>
+<p>Full price tickets are selling at ¤999 but we&#8217;re giving you the chance to purchase a ticket for ¤590 (excluding tax). We only have five available at this price so we&#8217;re going to make you work, just a little bit. And what better chance than to roll out a picture of our office cat. For your chance to win, just leave a comment with your best caption for the picture below. You have until 12pm (GMT) on 13th March to enter, with winners announced later that day. Good luck!</p>
+<p style="text-align: center;"><a href="http://www.simplyzesty.com/social-media/competition-win-discounted-tickets-to-the-next-web-conference-in-amsterdam/attachment/screen-shot-2012-02-09-at-12-04-40/"  rel="attachment wp-att-45897"><img class="aligncenter  wp-image-45897" title="Simply Zesty Office" src="http://simplyzesty.com/wp-content/uploads//2012/02/Screen-shot-2012-02-09-at-12.04.40.png" alt="" width="570" height="322" /></a></p>
+
+<div style="float:left; margin:-14px 8px -6px 0px;">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2546709088808069";
+/* 300x250 Bottom Of Every Post */
+google_ad_slot = "4825945556";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+					
+								     
+				     
+          			 <div class="tags"><h5>Tags</h5> <ul><li><a href="http://www.simplyzesty.com/tag/amsterdam-conference/" rel="tag">amsterdam conference</a></li><li><a href="http://www.simplyzesty.com/tag/chad-hurley/" rel="tag">chad hurley</a></li><li><a href="http://www.simplyzesty.com/tag/kevin-rose/" rel="tag">Kevin rose</a></li><li><a href="http://www.simplyzesty.com/tag/simply-zesty/" rel="tag">simply zesty</a></li><li><a href="http://www.simplyzesty.com/tag/social-media/" rel="tag">Social Media</a></li><li><a href="http://www.simplyzesty.com/tag/social-media-conference/" rel="tag">social media conference</a></li><li><a href="http://www.simplyzesty.com/tag/the-next-web/" rel="tag">the next web</a></li><li><a href="http://www.simplyzesty.com/tag/the-next-web-conference/" rel="tag">the next web conference</a></li><li><a href="http://www.simplyzesty.com/tag/tnw-conference/" rel="tag">tnw conference</a></li></ul></div> 
+
+      		</div>
+
+        </div>
+        
+          			
+	
+
+
+
+	<div id="otherposts">
+<h3>Other Posts You May Like</h3>
+
+				
+		
+		<div class="otherpost">
+                	
+                	<a href="http://www.simplyzesty.com/social-media/can-you-quantify-comedy-on-youtube/" class="other_img" title="Can You Quantify Comedy on Youtube?">
+          				<img src="http://simplyzesty.com/wp-content/uploads//2012/02/Comedy-slam-youtube-765x477.jpg" alt="" />          
+          				<h4>Can You Quantify Comedy on Youtube?</h4>
+          			</a>
+     			
+     	</div>						
+		
+				
+		
+		<div class="otherpost">
+                	
+                	<a href="http://www.simplyzesty.com/social-media/linkedin-global-expansion-grows-25-million-users-in-asia-pacific-region-alone/" class="other_img" title="LinkedIn Global Expansion Grows; 25 Million Users in Asia Pacific Region Alone">
+          				<img src="http://simplyzesty.com/wp-content/uploads//2011/10/LinkedIn-Offices-2-300x2721.jpg" alt="" />          
+          				<h4>LinkedIn Global Expansion Grows; 25 Million Users in Asia Pacific Region Alone</h4>
+          			</a>
+     			
+     	</div>						
+		
+				
+		
+		<div class="otherpost">
+                	
+                	<a href="http://www.simplyzesty.com/social-media/has-facebook-really-devalued-knowledge/" class="other_img" title="Has Facebook really devalued knowledge?">
+          				<img src="http://simplyzesty.com/wp-content/uploads//2012/02/photos2.png" alt="" />          
+          				<h4>Has Facebook really devalued knowledge?</h4>
+          			</a>
+     			
+     	</div>						
+		
+				
+		
+		<div class="otherpost">
+                	
+                	<a href="http://www.simplyzesty.com/social-media/the-daily-digest-the-social-media-stories-you-need-to-know-today-5/" class="other_img" title="The Daily Digest 
