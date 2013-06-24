@@ -217,14 +217,14 @@ if (str(options.folder) != "None"):
             #pre HTML zaznam pouzijem nastroj justext
             if (i % 2 == 1):
             
-            p.write("\r\n")
-            paragraphs = justext.justext(slov[i].encode("utf-8"), justext.get_stoplist('English'))
-            for paragraph in paragraphs:
-                p.write(paragraph['text'].encode("UTF-8"))
+                p.write("\r\n")
+                paragraphs = justext.justext(slov[i].encode("utf-8"), justext.get_stoplist('English'))
+                for paragraph in paragraphs:
+                    p.write(paragraph['text'].encode("UTF-8"))
                 
                 #doplnim potrebne znacky
-                p.write("\r\n")
-            p.write("\r\n\r\n")
+                    p.write("\r\n")
+                p.write("\r\n\r\n")
         #WARC hlavicky zapisem
         if (i % 2 == 0):
             for h in range(0,len(slov[i])):
@@ -275,7 +275,7 @@ if (str(options.folder) != "None"):
         
         #obsah korpusu zapisem do suboru
         subor.write(moje)
-        sys.exit(0)
+      
         #zavolam indexacny nastroj mantee
         try:
             subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c', str(os.path.abspath(fileList[hh]))])
@@ -425,7 +425,7 @@ else:
     moje="PATH  "+str(os.path.abspath(options.output))+"/"+folder_name  + "\n" + "VERTICAL " + str(os.path.abspath(options.file))  + "\nENCODING iso8859-2\n" + "INFO "+ "\""+ str(os.path.basename(options.file)) +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}"
     #vysledok zapisem do korpus suboru pre nastroj mantee
     subor.write(moje)
-    sys.exit(0)
+
     #zavolam nastroj na indexaciu mantee
     try:
         subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c', str(os.path.abspath(options.file))])
