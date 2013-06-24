@@ -12,7 +12,7 @@ import codecs
 import justext
 import os
 import subprocess
-import shutil
+
 
 #pomocne premenne
 fileList=[]
@@ -312,7 +312,7 @@ else:
     ind=0
     #odzipujem subor
     try:
-        subprocess.call(['gunzip', str(options.file)])
+        subprocess.call(['gunzip', os.path.abspath(str(options.file))])
     except: 
         pass
     index=0
@@ -375,7 +375,7 @@ else:
         #pre HTML zaznam pouzijem nastroj justext
         if (i % 2 == 1):
             
-            
+            p.write("\r\n")
             paragraphs = justext.justext(slov[i].encode("utf-8"), justext.get_stoplist('English'))
             for paragraph in paragraphs:
                 p.write(paragraph['text'].encode("UTF-8"))
@@ -388,14 +388,13 @@ else:
             for h in range(0,len(slov[i])):
                 p.write(slov[i][h].encode("UTF-8"))
                 
-                if (i != 0):
-                    p.write("\r\n")
+                
        
     p.close()
     
     #vysledny subor zazipujem naspet
     try:
-        subprocess.call(['gzip',  file_name])
+        subprocess.call(['gzip',  os.path.abspath(file_name)])
     except: 
         pass
     
@@ -426,13 +425,13 @@ else:
     kam = os.path.abspath(pathname)
     moje=""
     #upravim obsah korpusu
-    moje="PATH  "+ "/"+str(options.output)+"/"+folder_name  + "\n" + "VERTICAL " + str(options.file)  + "\nENCODING iso8859-2\n" + "INFO "+ "\""+ str(os.path.basename(options.file)) +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}"
+    moje="PATH  "+str(os.path.abspath(options.output))+"/"+folder_name  + "\n" + "VERTICAL " + str(os.path.abspath(options.file))  + "\nENCODING iso8859-2\n" + "INFO "+ "\""+ str(os.path.basename(options.file)) +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}"
     #vysledok zapisem do korpus suboru pre nastroj mantee
     subor.write(moje)
-    
+    sys.exit(0)
     #zavolam nastroj na indexaciu mantee
     try:
-        subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c', str(options.file)])
+        subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c', str(os.path.abspath(options.file))])
     except:
         sys.stderr.write("Error in encodevert\n")
         os.remove("vert.korp")
