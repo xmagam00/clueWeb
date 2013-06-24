@@ -132,45 +132,113 @@ if (move_on == 0):
 
 if (str(options.folder) != "None"):
     
+    pathname=""
+    kam=""
     pom=""
     pom_list=[]
-    for i in range(0,len(fileList)):
-        f = warc.open(fileList[i])
-        for record in f:
-            paragraphs = justext.justext(record, justext.get_stoplist('English'))
-            paragraphs = paragraphs.replace("<p>","")
-            paragraphs = paragraphs.replace("<h>","")
-            pom_list.append(paragraphs)
-        f = warc.open(options.file, "w")
-        for i in range(0,len(pom_list)):
-            f.write_record(pom_list[i])
-        h.close()
-        korp="PATH  "+ fileList[i]+ "\n"
-        + "VERTICAL "+str(options.output) + "\n"
-        + "ENCODING iso8859-2\n"
-        + "INFO"+ "\""+ subor +"\"" + "\n"
-        + "\n"
-        + "ATTRIBUTE word {\n"
-        + "   TYPE \"FD_FBD\"\n"
-        + "}\n"
-        + "\n"
-        + "ATTRIBUTE lemma {\n"
-        + "   TYPE \"FD_FBD\"\n"
-        + "}\n"
-        + "\n"
-        + "ATTRIBUTE tag {\n"
-        + "   TYPE \"FD_FBD\"\n"
-        + "}\n"
+    g=""
+    slov=dict()
+    ind=0
+    for g in range(0,len(fileList)):
         try:
-            os.environ["MANATEE_REGISTRY"] = ""
-            os.environ["MANATEE_REGISTRY"]  = korp
-            subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c', fileList[i]])
-            subprocess.Popen(['/mnt/minerva1/nlp/local64/bin/encodevert','-c'])
-            # thread continues ...
-            p.terminate()
+            subprocess.call(['gunzip', fileList[i]])
+        except: 
+            pass
+        index=0
+        zoznam=[]
+        index=str(os.path.basename(options.file)).find(".")
+        file_name=""
+        file_name=(str(fileList[i]))[:index]
+        file_name=file_name+".warc"
+        html=""
+        pom=""
+        f= codecs.open(file_name,"rb","ISO8859-15")
+        while (0==0):
+        
+            moje = f.readline()
+            
+            if not moje: break
+            moje=unicode(moje)
+            if (ind == 2):
+                break
+            if (moje.find("WARC/1.0") != -1):
+                if (len(html) > 0):
+               
+                
+                    paragraphs = justext.justext(unicode(html).encode("utf-8"), justext.get_stoplist('English'))
+                    for paragraph in paragraphs:
+                        pom =  paragraph['text']
+                        zoznam.append(pom)
+                html=""
+                slov[ind]=zoznam
+                pom=""
+                zoznam.append(moje)
+            
+                while(0==0):
+                    moje=f.readline()
+            
+              
+                    if (moje.find("!DOCTYPE") != -1):
+                        html=html+moje
+                        break
+                    else:
+                        zoznam.append(moje)
+                slov[ind]=zoznam
+            
+                ind=ind+1
+                zoznam=[]
+            else:
+                html=html+unicode(moje)
+            #aragraphs = justext.justext(record, justext.get_stoplist('English'))
+            #paragraphs = paragraphs.replace("<p>","")
+            #paragraphs = paragraphs.replace("<h>","")
+        p = codecs.open(file_name,"w")
+        for i in range(0,len(slov)):
+            for h in range(0,9):
+                p.write((slov[i][h]).encode('utf-8'))
+        p.close()
+    
+        try:
+            subprocess.call(['gzip',  file_name])
+        except: 
+            pass
+    
+    
+        try:
+            subor = codecs.open("vert.korp", "w")
+        except IOError:
+            sys.stderr.write("Nemozno vytvorit korpus subor pre endodevert\n")
+    
+        folder_name=""
+        index=0
+        index=str(os.path.basename(fileList[i])).find(".")
+        folder_name=str(os.path.basename(fileList[i]))[:index]
+  
+        pathname = os.path.dirname(sys.argv[0])        
+        if (str(fileList[i]).find("/") == -1):
+            fileList[i]=str(fileList[i])
+            fileList[i]=str(os.getcwd())+ "/"+fileList[i]
+    
+    
+   
+        try:
+            os.makedirs(options.output+"/"+folder_name)
         except:
-            sys.stderr.write("Error in encodevert")
+            pass
+  
+        kam = os.path.abspath(pathname)
+        moje=""
+        moje="PATH  "+ "/"+str(options.output)+"/"+folder_name  + "\n" + "VERTICAL " + str(fileList[i])  + "\nENCODING iso8859-2\n" + "INFO "+ "\""+ str(os.path.basename(options.file)) +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}"
+        subor.write(moje)
+        sys.exit(0)
+        try:
+            subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c', str(fileList[i])])
+        except:
+            sys.stderr.write("Error in encodevert\n")
+            os.remove("vert.korp")
             sys.exit(1)
+        subor.close()
+        os.remove("vert.korp")
 #bol zadany subor
 else:
     pathname=""
@@ -193,47 +261,82 @@ else:
     html=""
     pom=""
     f= codecs.open(file_name,"rb","ISO8859-15")
-    while (0==0):
+    while(0==0):
         
         moje = f.readline()
         
-        if not moje: break
+        if (ind == 4):
+            break
         moje=unicode(moje)
+        if not moje:
+            break
+        
+        #hlavicka WARC
         if (moje.find("WARC/1.0") != -1):
-            if (len(html) > 0):
-               
-                
-                paragraphs = justext.justext(unicode(html).encode("utf-8"), justext.get_stoplist('English'))
-                for paragraph in paragraphs:
-                    pom =  paragraph['text']
-                    zoznam.append(pom)
-            html=""
-            slov[ind]=zoznam
-            pom=""
             zoznam.append(moje)
-            
-            while(0==0):
-                moje=f.readline()
-            
-              
-                if (moje.find("!DOCTYPE") != -1):
+            while (0==0):
+                moje = f.readline()
+                if (moje.find("DOCTYPE") != -1):
+                    slov[ind]=zoznam
                     html=html+moje
+                    ind=ind+1
+                    zoznam=[]
                     break
                 else:
                     zoznam.append(moje)
-            slov[ind]=zoznam
+                    
+        #html
+        if (html.find("DOCTYPE") != -1):
+            while (0 == 0):
+                pom= f.readline()
+                print pom.encode("ISO8859-15")
+                if (pom.find("</html>") != -1):
+                    
+        #   while (0 == 0):
+              #  moje=f.readline()
+                #print "TAG:",moje.encode("ISO8859-15")
+                #print moje.encode("utf-8")
+               # if (moje.find("</html>") != -1):
+      #              html=html+moje
+      #              slov[ind]=html
+    #                ind=ind+1
+     #               zoznam=[]
+                  #  break
+      #          else:
+      #              html=html+moje
+                
+               
+               
             
-            ind=ind+1
-            zoznam=[]
-        else:
-            html=html+unicode(moje)
-            #aragraphs = justext.justext(record, justext.get_stoplist('English'))
-            #paragraphs = paragraphs.replace("<p>","")
-            #paragraphs = paragraphs.replace("<h>","")
+            
+      
+            
+        
+            
+            
+            
+           
+       
+   # print slov[0]
+    #print "KONIEC\n\n"
+   ## print slov[1]
+    #print "KONIEC\n\n"
+   # print slov[2]
+   # print "KONIEC\n\n"
+   # print slov[3]
+    
+  
+   
+   
+    sys.exit(0)
     p = codecs.open(file_name,"w")
     for i in range(0,len(slov)):
-        for h in range(0,9):
-            p.write((slov[i][h]).encode('utf-8'))
+        for h in range(len(slov[i])):
+            if (slov[i][h].find("DOCTYPE") != -1):
+                p.write("\r\n")
+            else:
+                p.write((slov[i][h]).encode('utf-8'))
+                p.write("\r\n")
     p.close()
     
     try:
@@ -258,7 +361,7 @@ else:
             options.file=str(os.getcwd())+ "/"+options.file
     
     
-    
+   
     try:
         os.makedirs(options.output+"/"+folder_name)
     except:
