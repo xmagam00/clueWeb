@@ -278,7 +278,7 @@ if (str(options.folder) != "None"):
       
         #zavolam indexacny nastroj mantee
         try:
-            subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c', str(os.path.abspath(fileList[hh]))])
+            subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c', str(os.getcwd())+"/"+"vert.korp"])
         except:
             sys.stderr.write("Error in encodevert\n")
             os.remove("vert.korp")
@@ -428,7 +428,7 @@ else:
 
     #zavolam nastroj na indexaciu mantee
     try:
-        subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c', str(os.path.abspath(options.file))])
+        subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c', str(os.getcwd())+"/"+"vert.korp" ])
     except:
         sys.stderr.write("Error in encodevert\n")
         os.remove("vert.korp")
