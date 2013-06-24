@@ -26,28 +26,28 @@ parser = OptionParser(usage)
 
 #parametre skriptus
 parser.add_option("--file", dest="file",
-                  help="Name of file from ClueWeb",
-                  type="string", metavar="FILE")
+                  help="Nazov suboru z ClueWeb",
+                  type="string", metavar="SUBOR")
 
 parser.add_option("--folder", dest="folder",
-                  help="Name of folder from which will be files from ClueWeb recursively processed",
-                  type="string", metavar="FOLDER")
+                  help="Nazov adresa, ktory obsahuje subory z ClueWeb a bude rekurzive spracovany",
+                  type="string", metavar="ADRESAR")
 
 
 parser.add_option("--output", dest="output",
-                  help="Name of folder where result file will be saved",
-                  type="string", metavar="FOLDER")
+                  help="Nazov adresa, do ktoreho bude ulozeny vysledok z nastroja mantee",
+                  type="string", metavar="ADRESAR")
 
 (options, args) = parser.parse_args()
 
 #testovanie na dostatocny pocet parametrov
 if (len(sys.argv) < 3):
-    sys.stderr.write("Bad amount of arguments")
+    sys.stderr.write("Zly pocet parametrov")
     sys.exit(1)
 
 
 if (len(str(options.file)) < 1 or len(str(options.folder)) < 1):
-    sys.stderr.write("Bad arguments")
+    sys.stderr.write("Zle argumenty")
     sys.exit(1)
 
 #pretypovanie na retazec
