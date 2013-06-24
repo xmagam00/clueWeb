@@ -151,7 +151,7 @@ if (str(options.folder) != "None"):
         
         #rozbalim subor
         try:
-            subprocess.call(['gunzip', str(fileList[hh])])
+            subprocess.call(['gunzip', str(os.path.abspath(fileList[hh]))])
         except: 
             pass
         
@@ -169,7 +169,7 @@ if (str(options.folder) != "None"):
         pom=""
         
         #otvorim subor pre citanie
-        f= codecs.open(file_name,"rb","ISO8859-15")
+        f= codecs.open(os.path.abspath(file_name),"rb","ISO8859-15")
         
         #parsujem jednotlive riadky
         while(0==0):
@@ -186,7 +186,7 @@ if (str(options.folder) != "None"):
                 zoznam.append(moje)
                 while (0==0):
                     moje = f.readline()
-                    if (moje.find("DOCTYPE") != -1 or moje.find("<html") != -1):
+                    if (moje.find("DOCTYPE") != -1 or moje.find("<html") != -1 ):
                         slov[ind]=zoznam
                         html=html+moje
                         ind=ind+1
@@ -196,11 +196,11 @@ if (str(options.folder) != "None"):
                         zoznam.append(moje)
                     
             #html telo
-            if (html.find("DOCTYPE") != -1 or moje.find("<html") != -1):
+            if (html.find("DOCTYPE") != -1 or moje.find("<html") != -1 ):
                 while (0 == 0):
                     pom= f.readline()
                     pom=unicode(pom)
-                    if (pom.find("</html>") != -1):
+                    if (pom.find("</html>") != -1 ):
                         html=html+pom
                         slov[ind]=html
                         html=""
@@ -211,33 +211,30 @@ if (str(options.folder) != "None"):
                         html=html+pom
 
         #opravene bloky zapisem naspet do toho isteho suboru
-        p = codecs.open(file_name,"w")
+        p = codecs.open(os.path.abspath(file_name),"w")
         for i in range(0,len(slov)):
             
-            #na html bloky aplikujem justext
+            #pre HTML zaznam pouzijem nastroj justext
             if (i % 2 == 1):
             
-                #justext
-                paragraphs = justext.justext(slov[i].encode("utf-8"), justext.get_stoplist('English'))
-                for paragraph in paragraphs:
-                    p.write(paragraph['text'].encode("UTF-8"))
+            p.write("\r\n")
+            paragraphs = justext.justext(slov[i].encode("utf-8"), justext.get_stoplist('English'))
+            for paragraph in paragraphs:
+                p.write(paragraph['text'].encode("UTF-8"))
                 
-                
-                    p.write("\r\n")
-                p.write("\r\n\r\n")
-            #WARC hlavicky
-            if (i % 2 == 0):
-                for h in range(0,len(slov[i])):
-                    p.write(slov[i][h].encode("UTF-8"))
-                
-                    if (i != 0):
-                        p.write("\r\n")
+                #doplnim potrebne znacky
+                p.write("\r\n")
+            p.write("\r\n\r\n")
+        #WARC hlavicky zapisem
+        if (i % 2 == 0):
+            for h in range(0,len(slov[i])):
+                p.write(slov[i][h].encode("UTF-8"))
        
         p.close()
         
         #zazipujem subory
         try:
-            subprocess.call(['gzip',  file_name])
+            subprocess.call(['gzip', os.path.abspath( file_name)])
         except: 
             pass
         
@@ -271,17 +268,17 @@ if (str(options.folder) != "None"):
         #vytvorim potrebnuy obsah korpusu
         if (fileList[hh][0] == '/'):
             moje=""
-            moje="PATH  "+ "/"+str(options.output)+"/"+folder_name  + "\n" + "VERTICAL " + str(fileList[hh])  + "\nENCODING iso8859-2\n" + "INFO "+ "\""+ str(os.path.basename(options.file)) +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}"
+            moje="PATH  "+ str(os.path.abspath(options.output))+"/"+folder_name  + "\n" + "VERTICAL " + str(os.path.abspath(fileList[hh]))  + "\nENCODING iso8859-2\n" + "INFO "+ "\""+ str(os.path.basename(options.file)) +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}"
         else:
             moje=""
-            moje="PATH  "+ "/"+str(options.output)+"/"+folder_name  + "\n" + "VERTICAL " + "/"+ str(fileList[hh])  + "\nENCODING iso8859-2\n" + "INFO "+ "\""+ str(os.path.basename(options.file)) +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}"
+            moje="PATH  "+ str(os.path.abspath(options.output))+"/"+folder_name  + "\n" + "VERTICAL " +  str(os.path.abspath(fileList[hh]))  + "\nENCODING iso8859-2\n" + "INFO "+ "\""+ str(os.path.basename(options.file)) +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}"
         
         #obsah korpusu zapisem do suboru
         subor.write(moje)
-        
+        sys.exit(0)
         #zavolam indexacny nastroj mantee
         try:
-            subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c', str(fileList[hh])])
+            subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c', str(os.path.abspath(fileList[hh]))])
         except:
             sys.stderr.write("Error in encodevert\n")
             os.remove("vert.korp")
@@ -344,7 +341,7 @@ else:
             zoznam.append(moje)
             while (0==0):
                 moje = f.readline()
-                if (moje.find("DOCTYPE") != -1 or moje.find("<html") != -1):
+                if (moje.find("DOCTYPE") != -1 or moje.find("<html") != -1 ):
                     slov[ind]=zoznam
                     html=html+moje
                     ind=ind+1
@@ -358,7 +355,7 @@ else:
             while (0 == 0):
                 pom= f.readline()
                 pom=unicode(pom)
-                if (pom.find("</html>") != -1):
+                if (pom.find("</html>") != -1 ):
                     html=html+pom
                     slov[ind]=html
                     html=""

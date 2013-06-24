@@ -1,7 +1,7 @@
-PATH  /home/martin/Reasearch/git/clueWeb/SEM/0000tw-49
-VERTICAL /home/martin/Reasearch/git/clueWeb/0000tw-49.warc.gz
+PATH  /home/martin/Reasearch/git/clueWeb/MOJ/0000tw-49
+VERTICAL /home/martin/Reasearch/git/clueWeb/SEM/0000tw-49.warc.gz
 ENCODING iso8859-2
-INFO "0000tw-49.warc.gz"
+INFO "None"
 
 ATTRIBUTE word {
    TYPE "FD_FBD"
