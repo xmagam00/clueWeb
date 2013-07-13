@@ -468,7 +468,7 @@ else:
         os.makedirs(options.output+"/"+folder_name)
     except:
         pass
-    print file_parse
+
 #vyparsovane subory sa ulozia do vopred vytvorenych priecinkov podla nazvu suboru
     for i in range(0,len(slov)):
 
