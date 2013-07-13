@@ -134,44 +134,44 @@ if (move_on == 0):
         else:
             sys.stderr.write("Neexistujuci subor/priecinok\n")
             sys.exit(1)
-
 #bol zadany priecinok
 if (str(options.folder) != "None"):
     
+#pomocne premenne
     pathname=""
     kam=""
     pom=""
     pom_list=[]
     g=""
     slov=dict()
+    index2=0
+    pom_parse=""
     ind=0
-    
-    #prehladavam jednotlive subory
-    for hh in range(0,len(fileList)):
-        
-        #rozbalim subor
+    url =[]
+    file_parse=[]
+    pom_file=""
+    pom_file2=""
+    for hh in range(0,len(FileList)):
+        #odzipujem subor
         try:
-            subprocess.call(['gunzip', str(os.path.abspath(fileList[hh]))])
+            subprocess.call(['gunzip', os.path.abspath(str(FileList[hh]))])
         except: 
             pass
-        
         index=0
         zoznam=[]
+        url=[]
         #zistim nazov suboru
-        index=str(os.path.basename(fileList[hh])).find(".")
-        
+        index=str(os.path.basename(FileList[hh])).find(".")
         file_name=""
-        file_name=(str(fileList[hh]))[:index+4]
-        #pridam priponu
+        file_name=(str(FileList[hh]))[:index]
         file_name=file_name+".warc"
-      
         html=""
         pom=""
-        
-        #otvorim subor pre citanie
-        f= codecs.open(os.path.abspath(file_name),"rb","ISO8859-15")
-        
-        #parsujem jednotlive riadky
+    
+        #otvorim odzipovany subor pre citanie
+        f= codecs.open(FileList[hh],"rb","ISO8859-15")
+    
+        #prehladavam cele telo
         while(0==0):
         
             moje = f.readline()
@@ -186,21 +186,37 @@ if (str(options.folder) != "None"):
                 zoznam.append(moje)
                 while (0==0):
                     moje = f.readline()
-                    if (moje.find("DOCTYPE") != -1 or moje.find("<html") != -1 ):
+                    if (moje.find("DOCTYPE") != -1 or moje.find("<html") != -1 or moje.find("<?xml") != -1 ):
                         slov[ind]=zoznam
                         html=html+moje
                         ind=ind+1
                         zoznam=[]
                         break
                     else:
+                        if (moje.find("Target-URI") != -1):
+                            index2=moje.find("Target-URI")
+                            pom_file2=moje[index2:]
+                            url.append(pom_file2)
+                            index2=0
+                            pom_file2=""
+                        if (moje.find("Warc-file-name") != -1):
+                            pom_file=moje
+                            index2=pom_file.find(":")
+                            pom_file2=pom_file[index2:]
+                            parse_file.append(pom_file2)
+                            index2=0
+                            pom_file=""
+                            pom_file2=""
+                         
+
                         zoznam.append(moje)
                     
-            #html telo
-            if (html.find("DOCTYPE") != -1 or moje.find("<html") != -1 ):
+            #html telo alebo xml telo
+            if (html.find("DOCTYPE") != -1 or moje.find("<html") != -1 or moje.find("<?xml") != -1):
                 while (0 == 0):
                     pom= f.readline()
                     pom=unicode(pom)
-                    if (pom.find("</html>") != -1 ):
+                    if (pom.find("</html>") != -1 or pom.find("</rss") != -1):
                         html=html+pom
                         slov[ind]=html
                         html=""
@@ -210,82 +226,97 @@ if (str(options.folder) != "None"):
                     else:
                         html=html+pom
 
-        #opravene bloky zapisem naspet do toho isteho suboru
-        p = codecs.open(os.path.abspath(file_name),"w")
-        for i in range(0,len(slov)):
-            
-            #pre HTML zaznam pouzijem nastroj justext
-            if (i % 2 == 1):
-            
-                p.write("\r\n")
-                paragraphs = justext.justext(slov[i].encode("utf-8"), justext.get_stoplist('English'))
-                for paragraph in paragraphs:
-                    p.write(paragraph['text'].encode("UTF-8"))
-                
-                #doplnim potrebne znacky
-                    p.write("\r\n")
-                p.write("\r\n\r\n")
-        #WARC hlavicky zapisem
-        if (i % 2 == 0):
-            for h in range(0,len(slov[i])):
-                p.write(slov[i][h].encode("UTF-8"))
-       
-        p.close()
-        
-        #zazipujem subory
-        try:
-            subprocess.call(['gzip', os.path.abspath( file_name)])
-        except: 
-            pass
-        
-        #pokusim sa vytvorit korpus pre nastroj mantee
-        try:
-            subor = codecs.open("vert.korp", "w")
-        except IOError:
-            sys.stderr.write("Nemozno vytvorit korpus subor pre endodevert\n")
-    
+
+  
+
+
+  
+
+
         folder_name=""
         index=0
-        
-        index=str(os.path.basename(fileList[hh])).find(".")
-        #zistim si nazov priecinky kde sa nachadza subor
-        folder_name=str(os.path.basename(fileList[hh]))[:index]
+        #zistim cestu
+        index=str(os.path.basename(FileList[hh])).find(".")
+        folder_name=str(os.path.basename(FileList[hh]))[:index]
   
         pathname = os.path.dirname(sys.argv[0])        
-        if (str(options.file).find("/") == -1):
-            options.file=str(options.file)
-            options.file=str(os.getcwd())+ "/"+options.file
+        if (str(FileList[hh]).find("/") == -1):
+            FileList[hh]=str(FileList[hh])
+            FileList[hh]=str(os.getcwd())+ "/"+ FileList[hh]
     
     
-        #vytvorim priecinok kam ulozim subory z nastroja mantee
+    
+        kam = os.path.abspath(pathname)
+        moje=""
+        #index pre url z WARC hlavicky
+        m=0
+        #vytvorim priecinok pre vysledok
         try:
             os.makedirs(options.output+"/"+folder_name)
         except:
             pass
   
-        kam = os.path.abspath(pathname)
-        
-        #vytvorim potrebnuy obsah korpusu
-        if (fileList[hh][0] == '/'):
-            moje=""
-            moje="PATH  "+ str(os.path.abspath(options.output))+"/"+folder_name  + "\n" + "VERTICAL " + str(os.path.abspath(fileList[hh]))  + "\nENCODING iso8859-2\n" + "INFO "+ "\""+ str(os.path.basename(options.file)) +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}"
-        else:
-            moje=""
-            moje="PATH  "+ str(os.path.abspath(options.output))+"/"+folder_name  + "\n" + "VERTICAL " +  str(os.path.abspath(fileList[hh]))  + "\nENCODING iso8859-2\n" + "INFO "+ "\""+ str(os.path.basename(options.file)) +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}"
-        
-        #obsah korpusu zapisem do suboru
-        subor.write(moje)
-      
-        #zavolam indexacny nastroj mantee
+
+
+#vyparsovane subory sa ulozia do vopred vytvorenych priecinkov podla nazvu suboru
+        for i in range(0,len(slov)):
+
+
+                #pre HTML zaznam pouzijem nastroj justext alebo xml
+            if (i % 2 == 1):
+
+            
+                paragraphs = justext.justext(slov[i].encode("utf-8"), justext.get_stoplist('English'))
+                for paragraph in paragraphs:
+                    p.write(paragraph['text'].encode("UTF-8"))
+                
+                    #doplnim potrebne znacky
+                    p.write("\r\n")
+                p.write("\r\n\r\n")
+                p.close()
+
+            #WARC hlavicky zapisem
+            if (i % 2 == 0):
+                try:
+                    os.makedirs(str(options.output) +"/"+folder_name+"/"+file_parse[i])
+                except:
+                    pass
+
+                p = codecs.open(options.output+"/"+folder_name+"/"+file_parse[i]+ file_parse[i],"w")
+
+                p.write(url[m].encode("UTF-8"))
+                m=m+1
+                p.write("\r\n")
+                
+                
+       
+    
+        #vytvorim si subor pre definiciu korpusu
         try:
-            subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c', str(os.getcwd())+"/"+"vert.korp"])
+            subor = codecs.open("vert.korp", "w")
+        except IOError:
+             sys.stderr.write("Nemozno vytvorit korpus subor pre endodevert\n")
+    
+       #upravim obsah korpusu
+        moje="PATH  "+str(options.output)+"/"+folder_name  + "/"+ file_parse[i]+ "\n" +     "VERTICAL " + str(os.path.abspath(file_parse[i]))  + "\nENCODING iso8859-2\n" + "INFO "+   "\""+ file_parse[i] +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "    TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    +  "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}"
+        #vysledok zapisem do korpus suboru pre nastroj mantee
+        subor.write(moje)
+
+        #zavolam nastroj na indexaciu mantee
+        try:
+            subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c',   str(os.getcwd())+"/"+"vert.korp" ])
         except:
             sys.stderr.write("Error in encodevert\n")
             os.remove("vert.korp")
             sys.exit(1)
         subor.close()
-        #odstranim nepotrebny korpus
+        #vymazem nepotrebny korpus subor
         os.remove("vert.korp")
+        #vysledny subor zazipujem naspet
+        try:
+            subprocess.call(['gzip',  os.path.abspath(file_name)])
+        except: 
+            pass
         #reincializujem premenne pre dalsi subor
         pathname=""
         kam=""
@@ -306,7 +337,13 @@ else:
     pom_list=[]
     g=""
     slov=dict()
+    index2=0
+    pom_parse=""
     ind=0
+    url =[]
+    file_parse=[]
+    pom_file=""
+    pom_file2=""
     #odzipujem subor
     try:
         subprocess.call(['gunzip', os.path.abspath(str(options.file))])
@@ -341,21 +378,36 @@ else:
             zoznam.append(moje)
             while (0==0):
                 moje = f.readline()
-                if (moje.find("DOCTYPE") != -1 or moje.find("<html") != -1 ):
+                if (moje.find("DOCTYPE") != -1 or moje.find("<html") != -1 or moje.find("<?xml") != -1 ):
                     slov[ind]=zoznam
                     html=html+moje
                     ind=ind+1
                     zoznam=[]
                     break
                 else:
+                    if (moje.find("Target-URI") != -1):
+                        index2=moje.find("Target-URI") 
+                        pom_file2=moje[index2:]
+                        url.append(pom_file2)
+                        index2=0
+                        pom_file2=""
+                        
+                    if (moje.find("TREC-ID") != -1):
+                        pom_file=moje
+                        index2=pom_file.find(":")
+                        pom_file2=pom_file[index2:]
+                        file_parse.append(pom_file2)
+                        index2=0
+                        pom_file=""
+                        pom_file2=""
                     zoznam.append(moje)
                     
-        #html telo
-        if (html.find("DOCTYPE") != -1 or moje.find("<html") != -1):
+        #html telo alebo xml telo
+        if (html.find("DOCTYPE") != -1 or moje.find("<html") != -1 or moje.find("<?xml") != -1):
             while (0 == 0):
                 pom= f.readline()
                 pom=unicode(pom)
-                if (pom.find("</html>") != -1 ):
+                if (pom.find("</html>") != -1 or pom.find("</rss") != -1):
                     html=html+pom
                     slov[ind]=html
                     html=""
@@ -365,42 +417,13 @@ else:
                 else:
                     html=html+pom
 
-    #otvorim subor pre zapis = vymazen obsah
-    p = codecs.open(file_name,"w")
-    for i in range(0,len(slov)):
-        
-        #pre HTML zaznam pouzijem nastroj justext
-        if (i % 2 == 1):
-            
-            p.write("\r\n")
-            paragraphs = justext.justext(slov[i].encode("utf-8"), justext.get_stoplist('English'))
-            for paragraph in paragraphs:
-                p.write(paragraph['text'].encode("UTF-8"))
-                
-                #doplnim potrebne znacky
-                p.write("\r\n")
-            p.write("\r\n\r\n")
-        #WARC hlavicky zapisem
-        if (i % 2 == 0):
-            for h in range(0,len(slov[i])):
-                p.write(slov[i][h].encode("UTF-8"))
-                
-                
-       
-    p.close()
-    
-    #vysledny subor zazipujem naspet
-    try:
-        subprocess.call(['gzip',  os.path.abspath(file_name)])
-    except: 
-        pass
-    
-    #vytvorim si subor pre definiciu korpusu
-    try:
-        subor = codecs.open("vert.korp", "w")
-    except IOError:
-        sys.stderr.write("Nemozno vytvorit korpus subor pre endodevert\n")
-    
+
+  
+
+
+  
+
+
     folder_name=""
     index=0
     #zistim cestu
@@ -413,27 +436,76 @@ else:
             options.file=str(os.getcwd())+ "/"+options.file
     
     
-    #vytvorim priecinok pre vysledok
+    
+    kam = os.path.abspath(pathname)
+    moje=""
+#index pre url z WARC hlavicky
+    m=0
+#vytvorim priecinok pre vysledok
     try:
         os.makedirs(options.output+"/"+folder_name)
     except:
         pass
-    
-    kam = os.path.abspath(pathname)
-    moje=""
-    #upravim obsah korpusu
-    moje="PATH  "+str(os.path.abspath(options.output))+"/"+folder_name  + "\n" + "VERTICAL " + str(os.path.abspath(options.file))  + "\nENCODING iso8859-2\n" + "INFO "+ "\""+ str(os.path.basename(options.file)) +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}"
-    #vysledok zapisem do korpus suboru pre nastroj mantee
-    subor.write(moje)
 
-    #zavolam nastroj na indexaciu mantee
-    try:
-        subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c', str(os.getcwd())+"/"+"vert.korp" ])
-    except:
-        sys.stderr.write("Error in encodevert\n")
+
+#vyparsovane subory sa ulozia do vopred vytvorenych priecinkov podla nazvu suboru
+    for i in range(0,len(slov)):
+
+
+                #pre HTML zaznam pouzijem nastroj justext alebo xml
+        if (i % 2 == 1):
+
+            
+            paragraphs = justext.justext(slov[i].encode("utf-8"), justext.get_stoplist('English'))
+            for paragraph in paragraphs:
+                p.write(paragraph['text'].encode("UTF-8"))
+                
+                #doplnim potrebne znacky
+                p.write("\r\n")
+            p.write("\r\n\r\n")
+            p.close()
+
+        #WARC hlavicky zapisem
+        if (i % 2 == 0):
+            try:
+                os.makedirs(str(options.output) +"/"+folder_name+"/"+file_parse[i])
+            except:
+                pass
+
+            p = codecs.open(options.output+"/"+folder_name+"/"+file_parse[i]+ file_parse[i],"w")
+
+            p.write(url[m].encode("UTF-8"))
+            m=m+1
+            p.write("\r\n")
+                
+                
+       
+    
+        #vytvorim si subor pre definiciu korpusu
+        try:
+           subor = codecs.open("vert.korp", "w")
+        except IOError:
+             sys.stderr.write("Nemozno vytvorit korpus subor pre endodevert\n")
+    
+       #upravim obsah korpusu
+        moje="PATH  "+str(options.output)+"/"+folder_name  + "/"+ file_parse[i]+ "\n" +     "VERTICAL " + str(os.path.abspath(file_parse[i]))  + "\nENCODING iso8859-2\n" + "INFO "+   "\""+ file_parse[i] +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "    TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    +  "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}"
+        #vysledok zapisem do korpus suboru pre nastroj mantee
+        subor.write(moje)
+
+        #zavolam nastroj na indexaciu mantee
+        try:
+            subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c',   str(os.getcwd())+"/"+"vert.korp" ])
+        except:
+            sys.stderr.write("Error in encodevert\n")
+            os.remove("vert.korp")
+            sys.exit(1)
+        subor.close()
+        #vymazem nepotrebny korpus subor
         os.remove("vert.korp")
-        sys.exit(1)
-    subor.close()
-    #vymazem nepotrebny korpus subor
-    os.remove("vert.korp")
+       #vysledny subor zazipujem naspet
+    try:
+        subprocess.call(['gzip',  os.path.abspath(file_name)])
+    except: 
+         pass
+
 sys.exit(0)

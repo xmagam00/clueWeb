@@ -1,14 +1,4 @@
-﻿#!/usr/bin/env python
-
-
-"""
-Autor: Martin Maga
-Popis: ClueWeb
-Skript odstrani html tagy a naindexuje data pomocou mantee
-"""
-
-
-import sys
+﻿import sys
 from optparse import OptionParser
 import codecs
 import justext
