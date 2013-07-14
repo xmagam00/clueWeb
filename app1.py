@@ -312,11 +312,14 @@ if (str(options.folder) != "None"):
             sys.stderr.write("Nemozno vytvorit korpus subor pre endodevert\n")
     
     #upravim obsah korpusu
-        pom= suborList[i]
-        moje="PATH  "+os.path.abspath(pom)+ "\n" +     "VERTICAL " + str(os.path.abspath(suborList[i]))  + "\nENCODING iso8859-2\n" + "INFO "+   "\""+ suborList[i] +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "    TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    +  "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}"
+        pom=str(os.getcwd())+"/"+ suborList[i]
+	pom=pom[:pom.rfind("/")]
+        moje="PATH  "+pom +     "\nVERTICAL " + str(os.getcwd())+"/"+ suborList[i]   + "\nENCODING iso8859-2\n" + "INFO "+   "\""+ suborList[i] +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "    TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    +  "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}\n"
         #vysledok zapisem do korpus suboru pre nastroj mantee
         subor.write(moje)
-    
+	    
+	
+
         
         #zavolam nastroj na indexaciu mantee
         try:
@@ -468,7 +471,7 @@ else:
         os.makedirs(options.output+"/"+folder_name)
     except:
         pass
-
+   
 #vyparsovane subory sa ulozia do vopred vytvorenych priecinkov podla nazvu suboru
     for i in range(0,len(slov)):
 
@@ -511,12 +514,12 @@ else:
             sys.stderr.write("Nemozno vytvorit korpus subor pre endodevert\n")
     
     #upravim obsah korpusu
-        pom=str(options.output)+"/"+folder_name  + "/"+ file_parse[i]
-        moje="PATH  "+os.path.abspath(pom)+ "\n" +     "VERTICAL " + str(os.path.abspath(file_parse[i]))  + "\nENCODING iso8859-2\n" + "INFO "+   "\""+ file_parse[i] +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "    TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    +  "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}"
+        pom= file_parse[i]
+        moje="PATH  "+    os.path.abspath(str(options.output))+"/"+folder_name+"/"+str(file_parse[i])+"\n" +     "VERTICAL " + os.path.abspath(str(options.output))+"/"+folder_name+"/"+str(file_parse[i])+"/"+str(file_parse[i]) + "\nENCODING iso8859-2\n" + "INFO "+   "\""+ file_parse[i] +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "    TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    +  "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}\n"
         #vysledok zapisem do korpus suboru pre nastroj mantee
         subor.write(moje)
       
-        
+	 
         #zavolam nastroj na indexaciu mantee
         try:
             subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c',   str(os.getcwd())+"/"+"vert.korp" ])
