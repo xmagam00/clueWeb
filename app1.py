@@ -162,6 +162,9 @@ if (str(options.folder) != "None"):
     
     index=0
     zoznam=[]
+    indexik=0
+    indexik2=0
+    pomik=""
     for i in range(0,len(fileList)):
     #zistim nazov suboru
       
@@ -217,6 +220,14 @@ if (str(options.folder) != "None"):
                             index2=pom_file.find(":")
                             pom_file2=pom_file[index2+2:len(pom_file)-2]
                             file_parse.append(pom_file2)
+                           
+                            indexik=fileList[i].rfind("/")
+                            indexik2=fileList[i].rfind(".")
+                            
+                            pomik=fileList[i][indexik+1:index2-4]
+                            pomik=pomik.replace(".","")
+                            suborList.append(str(options.output)+"/"+pomik+"/"+pom_file2+"/"+pom_file2)
+                            folderList.append(str(options.output)+"/"+pomik+"/"+pom_file2)
                             #sys.stdout.write(pom_file2)
                             index2=0
                             pom_file=""
@@ -292,8 +303,8 @@ if (str(options.folder) != "None"):
                     os.makedirs(str(options.output) +"/"+folder_name+"/"+file_parse[m])
                 except:
                     pass
-                suborList.append(options.output+"/"+folder_name+"/"+file_parse[m]+"/" +file_parse[m])
-                folderList.append(folder_name)
+                #suborList.append(options.output+"/"+folder_name+"/"+file_parse[m]+"/" +file_parse[m])
+             
                 p = codecs.open(options.output+"/"+folder_name+"/"+file_parse[m]+"/" +file_parse[m],"w")
 
                 p.write(url[m].encode("UTF-8"))
@@ -302,8 +313,8 @@ if (str(options.folder) != "None"):
                 
                 
    
-    
-    for i in range(0,len(suborList)/2):
+  
+    for i in range(0,len(suborList)):
         
         #vytvorim si subor pre definiciu korpusu
         try:
@@ -313,14 +324,14 @@ if (str(options.folder) != "None"):
     
     #upravim obsah korpusu
         pom=str(os.getcwd())+"/"+ suborList[i]
-	pom=pom[:pom.rfind("/")]
-        moje="PATH  "+pom +     "\nVERTICAL " + str(os.getcwd())+"/"+ suborList[i]   + "\nENCODING iso8859-2\n" + "INFO "+   "\""+ suborList[i] +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "    TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    +  "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}\n"
+        pom=pom[:pom.rfind("/")]
+        moje="PATH  "+folderList[i]+     "\nVERTICAL " + suborList[i]   + "\nENCODING iso8859-2\n" + "INFO "+   "\""+ suborList[i] +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "    TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    +  "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}\n"
         #vysledok zapisem do korpus suboru pre nastroj mantee
         subor.write(moje)
-	    
-	
+        print moje
 
-        
+       # print moje
+        """
         #zavolam nastroj na indexaciu mantee
         try:
             subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c',   str(os.getcwd())+"/"+"vert.korp" ])
@@ -328,12 +339,13 @@ if (str(options.folder) != "None"):
             sys.stderr.write("Error in encodevert\n")
             os.remove("vert.korp")
             sys.exit(1)
-        
+        """
         subor.close()
             #vymazem nepotrebny korpus subor
         os.remove("vert.korp")
         
             #vysledny subor zazipujem naspet
+    
     
     for i in range(0,len(fileList)):
         pom=fileList[i][:len(fileList[i])-3]

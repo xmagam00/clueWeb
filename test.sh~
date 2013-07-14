@@ -8,7 +8,6 @@ cp TEST/test1.warc.gz /home/martin/Reasearch/git/clueWeb/IN/
 cp TEST/test2.warc.gz /home/martin/Reasearch/git/clueWeb/IN/
 
 ./app1.py --folder=IN --output=VYSLEDOK
-rm -f /home/martin/Reasearch/git/clueWeb/IN/test.warc.gz
-rm -f /home/martin/Reasearch/git/clueWeb/IN/test1.warc.gz
-rm -f /home/martin/Reasearch/git/clueWeb/IN/test2.warc.gz
+
+
 

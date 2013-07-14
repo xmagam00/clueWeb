@@ -1,0 +1,205 @@
+[u'VYSLEDOK/test/clueweb12-0000tw-49-00000/clueweb12-0000tw-49-00000', u'VYSLEDOK/test/clueweb12-0000tw-49-00083/clueweb12-0000tw-49-00083', u'VYSLEDOK/test/clueweb12-0000tw-49-00084/clueweb12-0000tw-49-00084', u'VYSLEDOK/test/clueweb12-0000tw-49-00186/clueweb12-0000tw-49-00186', u'VYSLEDOK/test1/clueweb12-0000tw-49-00000/clueweb12-0000tw-49-00000', u'VYSLEDOK/test1/clueweb12-0000tw-49-00083/clueweb12-0000tw-49-00083', u'VYSLEDOK/test1/clueweb12-0000tw-49-00084/clueweb12-0000tw-49-00084', u'VYSLEDOK/test1/clueweb12-0000tw-49-00186/clueweb12-0000tw-49-00186', u'VYSLEDOK/test1/clueweb12-0000tw-49-00000/clueweb12-0000tw-49-00000', u'VYSLEDOK/test1/clueweb12-0000tw-49-00083/clueweb12-0000tw-49-00083', u'VYSLEDOK/test1/clueweb12-0000tw-49-00084/clueweb12-0000tw-49-00084', u'VYSLEDOK/test1/clueweb12-0000tw-49-00186/clueweb12-0000tw-49-00186', u'VYSLEDOK/test2/clueweb12-0000tw-49-00000/clueweb12-0000tw-49-00000', u'VYSLEDOK/test2/clueweb12-0000tw-49-00083/clueweb12-0000tw-49-00083', u'VYSLEDOK/test2/clueweb12-0000tw-49-00084/clueweb12-0000tw-49-00084', u'VYSLEDOK/test2/clueweb12-0000tw-49-00186/clueweb12-0000tw-49-00186', u'VYSLEDOK/test2/clueweb12-0000tw-49-00000/clueweb12-0000tw-49-00000', u'VYSLEDOK/test2/clueweb12-0000tw-49-00083/clueweb12-0000tw-49-00083', u'VYSLEDOK/test2/clueweb12-0000tw-49-00084/clueweb12-0000tw-49-00084', u'VYSLEDOK/test2/clueweb12-0000tw-49-00186/clueweb12-0000tw-49-00186', u'VYSLEDOK/test2/clueweb12-0000tw-49-00000/clueweb12-0000tw-49-00000', u'VYSLEDOK/test2/clueweb12-0000tw-49-00083/clueweb12-0000tw-49-00083', u'VYSLEDOK/test2/clueweb12-0000tw-49-00084/clueweb12-0000tw-49-00084', u'VYSLEDOK/test2/clueweb12-0000tw-49-00186/clueweb12-0000tw-49-00186']
+PATH  /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test/clueweb12-0000tw-49-00000
+VERTICAL /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test/clueweb12-0000tw-49-00000/clueweb12-0000tw-49-00000
+ENCODING iso8859-2
+INFO "VYSLEDOK/test/clueweb12-0000tw-49-00000/clueweb12-0000tw-49-00000"
+
+ATTRIBUTE word {
+    TYPE "FD_FBD"
+}
+
+ATTRIBUTE lemma {
+   TYPE "FD_FBD"
+}
+
+ATTRIBUTE tag {
+   TYPE "FD_FBD"
+}
+
+PATH  /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test/clueweb12-0000tw-49-00083
+VERTICAL /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test/clueweb12-0000tw-49-00083/clueweb12-0000tw-49-00083
+ENCODING iso8859-2
+INFO "VYSLEDOK/test/clueweb12-0000tw-49-00083/clueweb12-0000tw-49-00083"
+
+ATTRIBUTE word {
+    TYPE "FD_FBD"
+}
+
+ATTRIBUTE lemma {
+   TYPE "FD_FBD"
+}
+
+ATTRIBUTE tag {
+   TYPE "FD_FBD"
+}
+
+PATH  /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test/clueweb12-0000tw-49-00084
+VERTICAL /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test/clueweb12-0000tw-49-00084/clueweb12-0000tw-49-00084
+ENCODING iso8859-2
+INFO "VYSLEDOK/test/clueweb12-0000tw-49-00084/clueweb12-0000tw-49-00084"
+
+ATTRIBUTE word {
+    TYPE "FD_FBD"
+}
+
+ATTRIBUTE lemma {
+   TYPE "FD_FBD"
+}
+
+ATTRIBUTE tag {
+   TYPE "FD_FBD"
+}
+
+PATH  /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test/clueweb12-0000tw-49-00186
+VERTICAL /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test/clueweb12-0000tw-49-00186/clueweb12-0000tw-49-00186
+ENCODING iso8859-2
+INFO "VYSLEDOK/test/clueweb12-0000tw-49-00186/clueweb12-0000tw-49-00186"
+
+ATTRIBUTE word {
+    TYPE "FD_FBD"
+}
+
+ATTRIBUTE lemma {
+   TYPE "FD_FBD"
+}
+
+ATTRIBUTE tag {
+   TYPE "FD_FBD"
+}
+
+PATH  /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test1/clueweb12-0000tw-49-00000
+VERTICAL /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test1/clueweb12-0000tw-49-00000/clueweb12-0000tw-49-00000
+ENCODING iso8859-2
+INFO "VYSLEDOK/test1/clueweb12-0000tw-49-00000/clueweb12-0000tw-49-00000"
+
+ATTRIBUTE word {
+    TYPE "FD_FBD"
+}
+
+ATTRIBUTE lemma {
+   TYPE "FD_FBD"
+}
+
+ATTRIBUTE tag {
+   TYPE "FD_FBD"
+}
+
+PATH  /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test1/clueweb12-0000tw-49-00083
+VERTICAL /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test1/clueweb12-0000tw-49-00083/clueweb12-0000tw-49-00083
+ENCODING iso8859-2
+INFO "VYSLEDOK/test1/clueweb12-0000tw-49-00083/clueweb12-0000tw-49-00083"
+
+ATTRIBUTE word {
+    TYPE "FD_FBD"
+}
+
+ATTRIBUTE lemma {
+   TYPE "FD_FBD"
+}
+
+ATTRIBUTE tag {
+   TYPE "FD_FBD"
+}
+
+PATH  /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test1/clueweb12-0000tw-49-00084
+VERTICAL /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test1/clueweb12-0000tw-49-00084/clueweb12-0000tw-49-00084
+ENCODING iso8859-2
+INFO "VYSLEDOK/test1/clueweb12-0000tw-49-00084/clueweb12-0000tw-49-00084"
+
+ATTRIBUTE word {
+    TYPE "FD_FBD"
+}
+
+ATTRIBUTE lemma {
+   TYPE "FD_FBD"
+}
+
+ATTRIBUTE tag {
+   TYPE "FD_FBD"
+}
+
+PATH  /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test1/clueweb12-0000tw-49-00186
+VERTICAL /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test1/clueweb12-0000tw-49-00186/clueweb12-0000tw-49-00186
+ENCODING iso8859-2
+INFO "VYSLEDOK/test1/clueweb12-0000tw-49-00186/clueweb12-0000tw-49-00186"
+
+ATTRIBUTE word {
+    TYPE "FD_FBD"
+}
+
+ATTRIBUTE lemma {
+   TYPE "FD_FBD"
+}
+
+ATTRIBUTE tag {
+   TYPE "FD_FBD"
+}
+
+PATH  /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test1/clueweb12-0000tw-49-00000
+VERTICAL /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test1/clueweb12-0000tw-49-00000/clueweb12-0000tw-49-00000
+ENCODING iso8859-2
+INFO "VYSLEDOK/test1/clueweb12-0000tw-49-00000/clueweb12-0000tw-49-00000"
+
+ATTRIBUTE word {
+    TYPE "FD_FBD"
+}
+
+ATTRIBUTE lemma {
+   TYPE "FD_FBD"
+}
+
+ATTRIBUTE tag {
+   TYPE "FD_FBD"
+}
+
+PATH  /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test1/clueweb12-0000tw-49-00083
+VERTICAL /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test1/clueweb12-0000tw-49-00083/clueweb12-0000tw-49-00083
+ENCODING iso8859-2
+INFO "VYSLEDOK/test1/clueweb12-0000tw-49-00083/clueweb12-0000tw-49-00083"
+
+ATTRIBUTE word {
+    TYPE "FD_FBD"
+}
+
+ATTRIBUTE lemma {
+   TYPE "FD_FBD"
+}
+
+ATTRIBUTE tag {
+   TYPE "FD_FBD"
+}
+
+PATH  /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test1/clueweb12-0000tw-49-00084
+VERTICAL /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test1/clueweb12-0000tw-49-00084/clueweb12-0000tw-49-00084
+ENCODING iso8859-2
+INFO "VYSLEDOK/test1/clueweb12-0000tw-49-00084/clueweb12-0000tw-49-00084"
+
+ATTRIBUTE word {
+    TYPE "FD_FBD"
+}
+
+ATTRIBUTE lemma {
+   TYPE "FD_FBD"
+}
+
+ATTRIBUTE tag {
+   TYPE "FD_FBD"
+}
+
+PATH  /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test1/clueweb12-0000tw-49-00186
+VERTICAL /home/martin/Reasearch/git/clueWeb/VYSLEDOK/test1/clueweb12-0000tw-49-00186/clueweb12-0000tw-49-00186
+ENCODING iso8859-2
+INFO "VYSLEDOK/test1/clueweb12-0000tw-49-00186/clueweb12-0000tw-49-00186"
+
+ATTRIBUTE word {
+    TYPE "FD_FBD"
+}
+
+ATTRIBUTE lemma {
+   TYPE "FD_FBD"
+}
+
+ATTRIBUTE tag {
+   TYPE "FD_FBD"
+}
+
