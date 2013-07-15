@@ -158,6 +158,7 @@ if (str(options.folder) != "None"):
             subprocess.call(['gunzip','-f', os.path.abspath(str(fileList[i]))])
         except: 
             print "Chyba pri unzip suboru",os.path.abspath(str(fileList[i]))
+            fileList.remove(fileList[i])
             pass
             
     
@@ -200,7 +201,102 @@ if (str(options.folder) != "None"):
                         slov[ind]=zoznam
                         html=html+moje
                         ind=ind+1
+                        
+                         #sys.stdout.write(str(slov[3]))
+                        #   sys.exit(0)
+      
+                        #zistim cestu
+                        index=str(os.path.basename(fileList[i])).find(".")
+                        folder_name=str(os.path.basename(fileList[i]))[:index]
+        
+                        pathname = os.path.dirname(sys.argv[0])        
+                        if (str(options.file).find("/") == -1):
+                            options.file=str(options.file)
+                            options.file=str(os.getcwd())+ "/"+fileList[i]
+    
+    
+    
+                        kam = os.path.abspath(pathname)
+                        moje=""
+                        #index pre url z WARC hlavicky
+                        m=0
+                        #vytvorim priecinok pre vysledok
+                        print "Podarilo sa mi vytvorit priecinok",options.output+"/"+folder_name
+                        try:
+                            os.makedirs(options.output+"/"+folder_name)
+                        except:
+                            print "Nepodarilo sa mi vytvorit priecinok",options.output+"/"+folder_name
+                            pass
+      
+                        #vyparsovane subory sa ulozia do vopred vytvorenych priecinkov podla nazvu suboru
+                        for i in range(0,len(slov)):
+
+
+                        #pre HTML zaznam pouzijem nastroj justext alebo xml
+                            if (i % 2 == 1):
+
+            
+                                paragraphs = justext.justext(slov[i].encode("utf-8"), justext.get_stoplist('English'))
+                                for paragraph in paragraphs:
+                                    p.write(paragraph['text'].encode("UTF-8"))
+                
+                                #doplnim potrebne znacky
+                                    p.write("\r\n")
+                                p.write("\r\n\r\n")
+                                p.close()
+
+                            #WARC hlavicky zapisem
+                            if (i % 2 == 0):
+                                print "Vytvaram  USPESNE priecinok",str(options.output) +"/"+folder_name+"/"+file_parse[m]
+                                try:
+                                    os.makedirs(str(options.output) +"/"+folder_name+"/"+file_parse[m])
+                                except:
+                                    print "Vytvaram  NEUSPESNE priecinok",str(options.output) +"/"+folder_name+"/"+file_parse[m]
+                                pass
+                            #suborList.append(options.output+"/"+folder_name+"/"+file_parse[m]+"/" +file_parse[m])
+             
+                                p = codecs.open(options.output+"/"+folder_name+"/"+file_parse[m]+"/" +file_parse[m],"w")
+
+                                p.write(url[m].encode("UTF-8"))
+                                m=m+1
+                                p.write("\r\n")
+                
+                
+   
+  
+    
+                        print "Indexuje subor",suborList[i]
+                            #vytvorim si subor pre definiciu korpusu
+                        try:
+                            subor = codecs.open("vert.korp", "w")
+                        except IOError:
+                            sys.stderr.write("Nemozno vytvorit korpus subor pre endodevert\n")
+                                
+                        #upravim obsah korpusu
+                        pom=str(os.getcwd())+"/"+ suborList[i]
+                        pom=pom[:pom.rfind("/")]
+                        moje="PATH  "+os.path.abspath(folderList[i])+     "\nVERTICAL " + os.path.abspath(suborList[i])   + "\nENCODING iso8859-2\n" + "INFO "+   "\""+ suborList[i] +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "    TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    +  "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}\n"
+                        #vysledok zapisem do korpus suboru pre nastroj mantee
+                        subor.write(moje)
+        
+
+       # print moje
+        
+        #zavolam nastroj na indexaciu mantee
+                        try:
+                            subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c',   str(os.getcwd())+"/"+"vert.korp" ])
+                        except:
+                            sys.stderr.write("Error in encodevert\n")
+                            os.remove("vert.korp")
+                            sys.exit(1)
+        
+                        subor.close()
+            #vymazem nepotrebny korpus subor
+                        os.remove("vert.korp")
                         zoznam=[]
+            #vysledny subor zazipujem naspet
+                        folder_name=""
+                        index=0
                         break
                     else:
                         if (moje.find("Target-URI") != -1):
@@ -257,108 +353,10 @@ if (str(options.folder) != "None"):
 
 
   
-        #sys.stdout.write(str(slov[3]))
-    #   sys.exit(0)
-        folder_name=""
-        index=0
-    #zistim cestu
-        index=str(os.path.basename(fileList[i])).find(".")
-        folder_name=str(os.path.basename(fileList[i]))[:index]
-        
-        pathname = os.path.dirname(sys.argv[0])        
-        if (str(options.file).find("/") == -1):
-            options.file=str(options.file)
-            options.file=str(os.getcwd())+ "/"+fileList[i]
+       
     
     
-    
-        kam = os.path.abspath(pathname)
-        moje=""
-#index pre url z WARC hlavicky
-        m=0
-#vytvorim priecinok pre vysledok
-        try:
-            os.makedirs(options.output+"/"+folder_name)
-        except:
-            pass
-      
-#vyparsovane subory sa ulozia do vopred vytvorenych priecinkov podla nazvu suboru
-        for i in range(0,len(slov)):
-
-
-                #pre HTML zaznam pouzijem nastroj justext alebo xml
-            if (i % 2 == 1):
-
-            
-                paragraphs = justext.justext(slov[i].encode("utf-8"), justext.get_stoplist('English'))
-                for paragraph in paragraphs:
-                    p.write(paragraph['text'].encode("UTF-8"))
-                
-                #doplnim potrebne znacky
-                    p.write("\r\n")
-                p.write("\r\n\r\n")
-                p.close()
-
-            #WARC hlavicky zapisem
-            if (i % 2 == 0):
-                print "Vytvaram  USPESNE priecinok",str(options.output) +"/"+folder_name+"/"+file_parse[m]
-                try:
-                    os.makedirs(str(options.output) +"/"+folder_name+"/"+file_parse[m])
-                except:
-                    print "Vytvaram  NEUSPESNE priecinok",str(options.output) +"/"+folder_name+"/"+file_parse[m]
-                    pass
-                #suborList.append(options.output+"/"+folder_name+"/"+file_parse[m]+"/" +file_parse[m])
-             
-                p = codecs.open(options.output+"/"+folder_name+"/"+file_parse[m]+"/" +file_parse[m],"w")
-
-                p.write(url[m].encode("UTF-8"))
-                m=m+1
-                p.write("\r\n")
-                
-                
    
-  
-    for i in range(0,len(suborList)):
-        print "Indexuje subor",suborList[i]
-        #vytvorim si subor pre definiciu korpusu
-        try:
-            subor = codecs.open("vert.korp", "w")
-        except IOError:
-            sys.stderr.write("Nemozno vytvorit korpus subor pre endodevert\n")
-    
-    #upravim obsah korpusu
-        pom=str(os.getcwd())+"/"+ suborList[i]
-        pom=pom[:pom.rfind("/")]
-        moje="PATH  "+os.path.abspath(folderList[i])+     "\nVERTICAL " + os.path.abspath(suborList[i])   + "\nENCODING iso8859-2\n" + "INFO "+   "\""+ suborList[i] +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "    TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    +  "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}\n"
-        #vysledok zapisem do korpus suboru pre nastroj mantee
-        subor.write(moje)
-        
-
-       # print moje
-        
-        #zavolam nastroj na indexaciu mantee
-        try:
-            subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c',   str(os.getcwd())+"/"+"vert.korp" ])
-        except:
-            sys.stderr.write("Error in encodevert\n")
-            os.remove("vert.korp")
-            sys.exit(1)
-        
-        subor.close()
-            #vymazem nepotrebny korpus subor
-        os.remove("vert.korp")
-        
-            #vysledny subor zazipujem naspet
-    
-    
-    for i in range(0,len(fileList)):
-        print "Zipujem subor",fileList[i]
-        pom=fileList[i][:len(fileList[i])-3]
-      
-        try:
-            subprocess.call(['gzip','-f',  os.path.abspath(pom)])
-        except: 
-            pass
 
       
     sys.exit(0)
@@ -380,10 +378,12 @@ else:
     pom_file=""
     pom_file2=""
     #odzipujem subor
+    print "Unzip suboru",str(options.file)
     try:
         subprocess.call(['gunzip', os.path.abspath(str(options.file))])
     except: 
-        print "Unzipujem subor",str(options.file)
+        print "Unzipujem subor chyba",str(options.file)
+        sys.exit(1)
         pass
     index=0
     zoznam=[]
@@ -418,20 +418,7 @@ else:
                     slov[ind]=zoznam
                     html=html+moje
                     ind=ind+1
-                    zoznam=[]
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    folder_name=""
-                    index=0
+                   
                     #zistim cestu
                     index=str(os.path.basename(options.file)).find(".")
                     folder_name=str(os.path.basename(options.file))[:index]
@@ -514,7 +501,20 @@ else:
                         subor.close()
                         #vymazem nepotrebny korpus subor
                         os.remove("vert.korp")
-        
+                    zoznam=[]
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    folder_name=""
+                    index=0
    
                     
                     
