@@ -157,6 +157,7 @@ if (str(options.folder) != "None"):
         try:
             subprocess.call(['gunzip','-f', os.path.abspath(str(fileList[i]))])
         except: 
+            print "Chyba pri unzip suboru",os.path.abspath(str(fileList[i]))
             pass
             
     
@@ -167,7 +168,7 @@ if (str(options.folder) != "None"):
     pomik=""
     for i in range(0,len(fileList)):
     #zistim nazov suboru
-      
+        print "Prave spracovavam",fileList[i]
         
         index=str((fileList[i])).rfind(".")
         
@@ -229,9 +230,11 @@ if (str(options.folder) != "None"):
                             suborList.append(str(options.output)+"/"+pomik+"/"+pom_file2+"/"+pom_file2)
                             folderList.append(str(options.output)+"/"+pomik+"/"+pom_file2)
                             #sys.stdout.write(pom_file2)
+                            print "Vyparsoval som z hlavicky subor",str(options.output)+"/"+pomik+"/"+pom_file2+"/"+pom_file2
                             index2=0
                             pom_file=""
                             pom_file2=""
+                            
                         zoznam.append(moje)
                     
             #html telo alebo xml telo
@@ -298,10 +301,11 @@ if (str(options.folder) != "None"):
 
             #WARC hlavicky zapisem
             if (i % 2 == 0):
-                
+                print "Vytvaram  USPESNE priecinok",str(options.output) +"/"+folder_name+"/"+file_parse[m]
                 try:
                     os.makedirs(str(options.output) +"/"+folder_name+"/"+file_parse[m])
                 except:
+                    print "Vytvaram  NEUSPESNE priecinok",str(options.output) +"/"+folder_name+"/"+file_parse[m]
                     pass
                 #suborList.append(options.output+"/"+folder_name+"/"+file_parse[m]+"/" +file_parse[m])
              
@@ -315,7 +319,7 @@ if (str(options.folder) != "None"):
    
   
     for i in range(0,len(suborList)):
-        
+        print "Indexuje subor",suborList[i]
         #vytvorim si subor pre definiciu korpusu
         try:
             subor = codecs.open("vert.korp", "w")
@@ -325,13 +329,13 @@ if (str(options.folder) != "None"):
     #upravim obsah korpusu
         pom=str(os.getcwd())+"/"+ suborList[i]
         pom=pom[:pom.rfind("/")]
-        moje="PATH  "+folderList[i]+     "\nVERTICAL " + suborList[i]   + "\nENCODING iso8859-2\n" + "INFO "+   "\""+ suborList[i] +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "    TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    +  "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}\n"
+        moje="PATH  "+os.path.abspath(folderList[i])+     "\nVERTICAL " + os.path.abspath(suborList[i])   + "\nENCODING iso8859-2\n" + "INFO "+   "\""+ suborList[i] +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "    TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    +  "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}\n"
         #vysledok zapisem do korpus suboru pre nastroj mantee
         subor.write(moje)
-        print moje
+        
 
        # print moje
-        """
+        
         #zavolam nastroj na indexaciu mantee
         try:
             subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c',   str(os.getcwd())+"/"+"vert.korp" ])
@@ -339,7 +343,7 @@ if (str(options.folder) != "None"):
             sys.stderr.write("Error in encodevert\n")
             os.remove("vert.korp")
             sys.exit(1)
-        """
+        
         subor.close()
             #vymazem nepotrebny korpus subor
         os.remove("vert.korp")
@@ -348,6 +352,7 @@ if (str(options.folder) != "None"):
     
     
     for i in range(0,len(fileList)):
+        print "Zipujem subor",fileList[i]
         pom=fileList[i][:len(fileList[i])-3]
       
         try:
@@ -378,6 +383,7 @@ else:
     try:
         subprocess.call(['gunzip', os.path.abspath(str(options.file))])
     except: 
+        print "Unzipujem subor",str(options.file)
         pass
     index=0
     zoznam=[]
@@ -433,6 +439,7 @@ else:
                         index2=pom_file.find(":")
                         pom_file2=pom_file[index2+2:len(pom_file)-2]
                         file_parse.append(pom_file2)
+                        print "Zo spefikovaneh suboru som ziskal subory(TREC-ID)",pom_file2
                         #sys.stdout.write(pom_file2)
                         index2=0
                         pom_file=""
@@ -482,6 +489,7 @@ else:
     try:
         os.makedirs(options.output+"/"+folder_name)
     except:
+        print "Vytvaram priecinok",options.output+"/"+folder_name
         pass
    
 #vyparsovane subory sa ulozia do vopred vytvorenych priecinkov podla nazvu suboru
@@ -503,10 +511,11 @@ else:
 
         #WARC hlavicky zapisem
         if (i % 2 == 0):
-         
+            print "Vytvaram  USPESNE priecinok",str(options.output) +"/"+folder_name+"/"+file_parse[m]
             try:
                 os.makedirs(str(options.output) +"/"+folder_name+"/"+file_parse[m])
             except:
+                print "Vytvaram  NEUSPESNE priecinok",str(options.output) +"/"+folder_name+"/"+file_parse[m]
                 pass
             
             p = codecs.open(options.output+"/"+folder_name+"/"+file_parse[m]+"/" +file_parse[m],"w")
@@ -530,8 +539,8 @@ else:
         moje="PATH  "+    os.path.abspath(str(options.output))+"/"+folder_name+"/"+str(file_parse[i])+"\n" +     "VERTICAL " + os.path.abspath(str(options.output))+"/"+folder_name+"/"+str(file_parse[i])+"/"+str(file_parse[i]) + "\nENCODING iso8859-2\n" + "INFO "+   "\""+ file_parse[i] +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "    TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    +  "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}\n"
         #vysledok zapisem do korpus suboru pre nastroj mantee
         subor.write(moje)
-      
-	 
+        
+        
         #zavolam nastroj na indexaciu mantee
         try:
             subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c',   str(os.getcwd())+"/"+"vert.korp" ])

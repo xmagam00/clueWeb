@@ -1,0 +1,1323 @@
+WARC/1.0
+WARC-Type: warcinfo
+WARC-Date: 2012-02-12T07:08:41Z
+WARC-Filename: 0000tw-49.warc.gz
+WARC-Number-of-Documents: 332
+WARC-File-Length: 22670545
+WARC-Data-Type: twitter links
+WARC-Record-ID: <urn:uuid:5dc77e05-3c26-4af5-814b-106522f7cd5e>
+Content-Type: application/warc-fields
+Content-Length: 283
+
+software: Heritrix/3.1.1-SNAPSHOT-20120210.102032 http://crawler.archive.org
+format: WARC File Format 1.0
+conformsTo: http://bibnum.bnf.fr/WARC/WARC_ISO_28500_version1_latestdraft.pdf
+isPartOf: ClueWeb12
+description:  The Lemur Project's ClueWeb12 dataset (http://lemurproject.org/)
+
+
+WARC/1.0
+WARC-Type: response
+WARC-Date: 2012-02-12T11:15:07Z
+WARC-TREC-ID: clueweb12-0000tw-49-00000
+WARC-IP-Address: 98.129.229.172
+WARC-Payload-Digest: sha1:T3GINWJ4IJUGRKAMWIUPK6GSHZOU22AU
+WARC-Target-URI: http://www.simplyzesty.com/social-media/competition-win-discounted-tickets-to-the-next-web-conference-in-amsterdam/
+WARC-Record-ID: <urn:uuid:153bee0f-d566-491b-a239-b7842bacaa46>
+Content-Type: application/http; msgtype=response
+Content-Length: 32910
+
+HTTP/1.0 200 OK
+Server: Apache/2.2
+Content-Type: text/html; charset=UTF-8
+Date: Sun, 12 Feb 2012 11:15:07 GMT
+X-Pingback: http://www.simplyzesty.com/xmlrpc.php
+Link: <http://www.simplyzesty.com/?p=45892>; rel=shortlink
+Connection: close
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>  Competition &#8211; Win Discounted Tickets to The Next Web Conference in Amsterdam &#8211; Simply Zesty - Simply Zesty</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="google-site-verification" content="d8NLPmtgsNN2l1PhVlcwyI093A63gcX4SqJCKivnpao" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic&v2">
+<link rel="stylesheet" href="http://www.simplyzesty.com/wp-content/themes/sz-2012/style.css" type="text/css" media="screen" />
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.1.2 - http://yoast.com/wordpress/seo/ -->
+<link rel="canonical" href="http://www.simplyzesty.com/social-media/competition-win-discounted-tickets-to-the-next-web-conference-in-amsterdam/" />
+<!-- / Yoast WordPress SEO plugin. -->
+
+				
+	<script type="text/javascript">//<![CDATA[
+	// Google Analytics for WordPress by Yoast v4.2.2 | http://yoast.com/wordpress/google-analytics/
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount','UA-11059530-1']);
+	_gaq.push(['_setDomainName','simplyzesty.com'],['_setCustomVar',1,'author','lauren-fisher',3],['_setCustomVar',2,'year','2012',3],['_setCustomVar',3,'category','social-media',3],['_trackPageview'],['_trackPageLoadTime']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	//]]></script>
+<link rel="alternate" type="application/rss+xml" title="Simply Zesty &raquo; Competition &#8211; Win Discounted Tickets to The Next Web Conference in Amsterdam Comments Feed" href="http://www.simplyzesty.com/social-media/competition-win-discounted-tickets-to-the-next-web-conference-in-amsterdam/feed/" />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.simplyzesty.com/wp-content/plugins/contact-form-7/styles.css?ver=3.0.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='http://www.simplyzesty.com/wp-content/themes/sz-2012/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<script type='text/javascript' src='http://platform.twitter.com/anywhere.js?id=UxNimVUWXVqhJ3d2tWza1w&#038;v=1&#038;ver=3.3.1'></script>
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js?ver=1.6'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.simplyzesty.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.simplyzesty.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.3.1" />
+<link rel='shortlink' href='http://www.simplyzesty.com/?p=45892' />
+<!-- HeadSpace SEO 3.6.37 by John Godley - urbangiraffe.com -->
+<meta name="description" content="Our friends over at The Next Web have kindly given us five discounted tickets to their conference in Amsterdam to give away to you lovely people! This" />
+<meta name="keywords" content="amsterdam conference,chad hurley,kevin rose,simply zesty,social media,social media conference,the next web,the next web conference,tnw conference" />
+<!-- HeadSpace -->
+<link rel="stylesheet" href="http://www.simplyzesty.com/wp-content/plugins/mm-forms/stylesheet.css" type="text/css" /><link rel="stylesheet" href="http://www.simplyzesty.com/wp-content/plugins/mm-forms/calendar.css" type="text/css" />
+	
+<script type="text/javascript">twttr.anywhere(onAnywhereLoad);function onAnywhereLoad(twitter) { twitter.hovercards(); }</script><script type="text/javascript" src="http://www.simplyzesty.com/wp-content/themes/sz-2012/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="http://www.simplyzesty.com/wp-content/themes/sz-2012/js/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="http://www.simplyzesty.com/wp-content/themes/sz-2012/js/jquery.restorable.js"></script>
+<script type="text/javascript" src="http://www.simplyzesty.com/wp-content/themes/sz-2012/js/sz.js"></script>
+
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+  <script type="text/javascript" src="http://platform.linkedin.com/in.js"></script>
+  <script type="text/javascript" src="http://apis.google.com/js/plusone.js" gapi_processed="true"></script>
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://simplyzesty.disqus.com/latest.rss" />
+<link rel="alternate" type="text/xml" title="RSS .92" href="http://simplyzesty.disqus.com/latest.rss" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://simplyzesty.disqus.com/latest.rss" />
+
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--[if IE 6]>
+<link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.0.3.css" media="screen, projection">
+<![endif]-->
+
+
+</head>
+
+<!--[if lt IE 7 ]> <body class="single single-post postid-45892 single-format-standard ie ie6"> <![endif]-->
+<!--[if IE 7 ]>    <body class="single single-post postid-45892 single-format-standard ie ie7"> <![endif]-->
+<!--[if IE 8 ]>    <body class="single single-post postid-45892 single-format-standard ie ie8"> <![endif]-->
+<!--[if IE 9 ]>    <body class="single single-post postid-45892 single-format-standard ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <body class="single single-post postid-45892 single-format-standard"> <!--<![endif]-->
+
+
+
+<section id="topnav">
+	
+	<ul id="topmenu">
+		<li class="selected"><a href="http://www.simplyzesty.com" title="">Simply Zesty</a></li>
+		<li><a href="http://www.simplyzesty.com/agency/" title="">SZ Agency</a></li>
+		<li><a href="http://training.simplyzesty.com/" title="">SZ Pro</a></li>
+		<li><a href="http://www.simplyzesty.com/speaking/" title="">SZ Speaking</a></li>
+		<li><a href="http://www.simplyzesty.com/training/" title="">SZ Training</a></li>	
+	</ul>
+	
+	<ul class="snlinks">
+	        <li class="fblink"><a href="http://www.facebook.com/SimplyZesty" rel="external" target="_blank">Facebook</a></li>
+	        <li class="twitlink"><a href="http://www.twitter.com/SimplyZesty" rel="external" target="_blank">Twitter</a></li>
+	        <li class="ytlink"><a href="http://www.youtube.com/simplyzesty" rel="external" target="_blank">Youtube</a></li>
+	        <li class="feedlink"><a href="http://feeds.feedburner.com/SimplyZesty" rel="external" target="_blank">RSS Feed</a></li>
+   </ul>
+    	
+	
+</section>
+<section id="container">
+
+	<header role="banner">
+	
+		<h1 id="logo"><a href="http://www.simplyzesty.com" title="Simply Zesty"><img src="http://www.simplyzesty.com/wp-content/themes/sz-2012/images/logo.png" alt="SZ Logo" /></a></h1>
+		
+		<form role="search" method="get" id="searchform" action="http://www.simplyzesty.com/">
+	<input type="text" name="s" id="s" value="Search &hellip;" class="default-value" />
+	<input type="submit" name="submit" id="searchsubmit"  value="Search"/>
+</form>	</header>
+	
+	<section id="mainmenu">
+		<ul id="menu-main-menu" class=""><li id="menu-item-25764" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-25764"><a href="http://www.simplyzesty.com/category/social-media/" >Social Media</a></li>
+<li id="menu-item-25765" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25765"><a href="http://www.simplyzesty.com/category/facebook/" >Facebook</a></li>
+<li id="menu-item-25767" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25767"><a href="http://www.simplyzesty.com/category/google/" >Google</a></li>
+<li id="menu-item-25766" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25766"><a href="http://www.simplyzesty.com/category/technology/" >Technology</a></li>
+<li id="menu-item-25827" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25827"><a href="http://www.simplyzesty.com/category/advertising-and-marketing/" >Advertising &#038; Marketing</a></li>
+<li id="menu-item-25769" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25769"><a href="http://www.simplyzesty.com/category/mobile/" >Mobile</a></li>
+<li id="menu-item-25770" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25770"><a href="http://www.simplyzesty.com/category/video/" >Video</a></li>
+<li id="menu-item-18551" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-18551"><a href="http://www.simplyzesty.com/category/viralvideos/" >Simply Viral</a></li>
+</ul>	</section>	
+	<section id="content">
+	
+		
+	<div id="main">
+		
+				
+		<div class="post-45892 post type-post status-publish format-standard hentry category-social-media tag-amsterdam-conference tag-chad-hurley tag-kevin-rose tag-simply-zesty tag-social-media tag-social-media-conference tag-the-next-web tag-the-next-web-conference tag-tnw-conference">
+      		
+      		<div class="post-content">
+      				<h1>Competition &#8211; Win Discounted Tickets to The Next Web Conference in Amsterdam</h1>
+      	
+					<div class="post-meta">
+					
+					 	
+						<span><a href="http://www.simplyzesty.com/category/social-media/" title="View all posts in Social Media" rel="category tag">Social Media</a></span> 
+						<span>February 9, 2012</span> 
+						<span><a href="http://www.simplyzesty.com/social-media/competition-win-discounted-tickets-to-the-next-web-conference-in-amsterdam/#comments" rel="nofollow" title="Comment on Competition &#8211; Win Discounted Tickets to The Next Web Conference in Amsterdam"><span class="dsq-postid" rel="45892 http://www.simplyzesty.com/?p=45892">4 Comments</span></a></span>
+						
+											 	<span><a href="https://twitter.com/laurenfisher" data-show-count="false" class="twitter-follow-button">@laurenfisher</a></span>
+					  					</div>
+					
+					<div class="post-social">
+
+	     				<span class="sb_google">
+	     					<g:plusone size="medium" href="http://www.simplyzesty.com/social-media/competition-win-discounted-tickets-to-the-next-web-conference-in-amsterdam/"></g:plusone>
+	     				</span> 
+	     				
+	     				<span class="sb_linkedin">
+	     					<script type="in/share" data-url="http://www.simplyzesty.com/social-media/competition-win-discounted-tickets-to-the-next-web-conference-in-amsterdam/" data-counter="right"></script>
+	     				</span> 
+	     				
+	     				<span class="sb_twitter">
+	     					<a href="http://twitter.com/share" class="twitter-share-button" data-text="Competition &#8211; Win Discounted Tickets to The Next Web Conference in Amsterdam" data-url="http://www.simplyzesty.com/social-media/competition-win-discounted-tickets-to-the-next-web-conference-in-amsterdam/" data-count="horizontal" data-via="simplyzesty" data-related="simplyzesty">Tweet</a> 
+	     				</span>
+	     				
+	     				<span class="sb_facebook">
+				          <iframe src="http://www.facebook.com/plugins/like.php?href=http://www.simplyzesty.com/social-media/competition-win-discounted-tickets-to-the-next-web-conference-in-amsterdam/&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowTransparency="true"></iframe>
+	          			</span>
+          			
+          			</div>
+          			
+     
+
+			  
+
+					  
+
+				     <p><a href="http://www.simplyzesty.com/social-media/competition-win-discounted-tickets-to-the-next-web-conference-in-amsterdam/attachment/screen-shot-2012-02-09-at-12-29-03/"  rel="attachment wp-att-45909"><img class="alignleft  wp-image-45909" title="The Next Web Conference" src="http://simplyzesty.com/wp-content/uploads//2012/02/Screen-shot-2012-02-09-at-12.29.03.png" alt="" width="341" height="154" /></a>Our friends over at <a href="http://thenextweb.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://thenextweb.com']);" target="_blank">The Next Web</a> have kindly given us five discounted tickets to<a href="http://thenextweb.com/conference/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://thenextweb.com']);" target="_blank"> their conference</a> in Amsterdam to give away to you lovely people! This is the 7th conference from <em>The Next Web</em> and it&#8217;s definitely established itself as one not to miss.</p>
+<p>This year&#8217;s speakers so far include Kevin Rose (founder of Digg, angel investor, entrepeneur), Chad Hurley (founder of Youtube, CEO of Delicious), Alexis Ohanian (co-founder of Reddit) and Susan Crawford (professor in New York). There&#8217;s also lots of other cool events at the conference, including a startup rally and hack battle. And of course, you get an excuse to visit one of the most amazing cities on the planet.</p>
+<p>Full price tickets are selling at â¬999 but we&#8217;re giving you the chance to purchase a ticket for â¬590 (excluding tax). We only have five available at this price so we&#8217;re going to make you work, just a little bit. And what better chance than to roll out a picture of our office cat. For your chance to win, just leave a comment with your best caption for the picture below. You have until 12pm (GMT) on 13th March to enter, with winners announced later that day. Good luck!</p>
+<p style="text-align: center;"><a href="http://www.simplyzesty.com/social-media/competition-win-discounted-tickets-to-the-next-web-conference-in-amsterdam/attachment/screen-shot-2012-02-09-at-12-04-40/"  rel="attachment wp-att-45897"><img class="aligncenter  wp-image-45897" title="Simply Zesty Office" src="http://simplyzesty.com/wp-content/uploads//2012/02/Screen-shot-2012-02-09-at-12.04.40.png" alt="" width="570" height="322" /></a></p>
+
+<div style="float:left; margin:-14px 8px -6px 0px;">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2546709088808069";
+/* 300x250 Bottom Of Every Post */
+google_ad_slot = "4825945556";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+					
+								     
+				     
+          			 <div class="tags"><h5>Tags</h5> <ul><li><a href="http://www.simplyzesty.com/tag/amsterdam-conference/" rel="tag">amsterdam conference</a></li><li><a href="http://www.simplyzesty.com/tag/chad-hurley/" rel="tag">chad hurley</a></li><li><a href="http://www.simplyzesty.com/tag/kevin-rose/" rel="tag">Kevin rose</a></li><li><a href="http://www.simplyzesty.com/tag/simply-zesty/" rel="tag">simply zesty</a></li><li><a href="http://www.simplyzesty.com/tag/social-media/" rel="tag">Social Media</a></li><li><a href="http://www.simplyzesty.com/tag/social-media-conference/" rel="tag">social media conference</a></li><li><a href="http://www.simplyzesty.com/tag/the-next-web/" rel="tag">the next web</a></li><li><a href="http://www.simplyzesty.com/tag/the-next-web-conference/" rel="tag">the next web conference</a></li><li><a href="http://www.simplyzesty.com/tag/tnw-conference/" rel="tag">tnw conference</a></li></ul></div> 
+
+      		</div>
+
+        </div>
+        
+          			
+	
+
+
+
+	<div id="otherposts">
+<h3>Other Posts You May Like</h3>
+
+				
+		
+		<div class="otherpost">
+                	
+                	<a href="http://www.simplyzesty.com/social-media/can-you-quantify-comedy-on-youtube/" class="other_img" title="Can You Quantify Comedy on Youtube?">
+          				<img src="http://simplyzesty.com/wp-content/uploads//2012/02/Comedy-slam-youtube-765x477.jpg" alt="" />          
+          				<h4>Can You Quantify Comedy on Youtube?</h4>
+          			</a>
+     			
+     	</div>						
+		
+				
+		
+		<div class="otherpost">
+                	
+                	<a href="http://www.simplyzesty.com/social-media/linkedin-global-expansion-grows-25-million-users-in-asia-pacific-region-alone/" class="other_img" title="LinkedIn Global Expansion Grows; 25 Million Users in Asia Pacific Region Alone">
+          				<img src="http://simplyzesty.com/wp-content/uploads//2011/10/LinkedIn-Offices-2-300x2721.jpg" alt="" />          
+          				<h4>LinkedIn Global Expansion Grows; 25 Million Users in Asia Pacific Region Alone</h4>
+          			</a>
+     			
+     	</div>						
+		
+				
+		
+		<div class="otherpost">
+                	
+                	<a href="http://www.simplyzesty.com/social-media/has-facebook-really-devalued-knowledge/" class="other_img" title="Has Facebook really devalued knowledge?">
+          				<img src="http://simplyzesty.com/wp-content/uploads//2012/02/photos2.png" alt="" />          
+          				<h4>Has Facebook really devalued knowledge?</h4>
+          			</a>
+     			
+     	</div>						
+		
+				
+		
+		<div class="otherpost">
+                	
+                	<a href="http://www.simplyzesty.com/social-media/the-daily-digest-the-social-media-stories-you-need-to-know-today-5/" class="other_img" title="The Daily Digest â The Social Media Stories You Need To Know Today">
+          				<img src="http://simplyzesty.com/wp-content/uploads//2012/02/LinkedIn-CEO-Jeff-Weiner-verified-765x473.jpg" alt="" />          
+          				<h4>The Daily Digest â The Social Media Stories You Need To Know Today</h4>
+          			</a>
+     			
+     	</div>						
+		
+				</div>
+	
+		
+	<div id="comments">
+
+		<h3>Comments</h3>
+		
+<div id="disqus_thread">
+                    <div id="dsq-content">
+
+
+            <ul id="dsq-comments">
+                    <li class="comment even thread-even depth-1" id="dsq-comment-35358">
+        <div id="dsq-comment-header-35358" class="dsq-comment-header">
+            <cite id="dsq-cite-35358">
+http://www.averagejoesblog.com                <span id="dsq-author-user-35358">Average Joes</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-35358" class="dsq-comment-body">
+            <div id="dsq-comment-message-35358" class="dsq-comment-message"><p>Win a &#8216;discounted&#8217; ticket&#8230; Sounds more like a sale than a competition <img src='http://www.simplyzesty.com/wp-includes/images/smilies/icon_wink.gif' alt=';-)' class='wp-smiley' /> </p>
+</div>
+        </div>
+    </li>
+
+    <ul class='children'>
+    <li class="comment odd alt depth-2" id="dsq-comment-35359">
+        <div id="dsq-comment-header-35359" class="dsq-comment-header">
+            <cite id="dsq-cite-35359">
+http://www.simplyzesty.com                <span id="dsq-author-user-35359">Lauren Fisher</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-35359" class="dsq-comment-body">
+            <div id="dsq-comment-message-35359" class="dsq-comment-message"><p>Hey Joe. I take your point but we only have 5 to give away at this price so competition seemed like the right way to go! Or was that your caption? <img src='http://www.simplyzesty.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+</div>
+        </div>
+    </li>
+
+    </li>
+</ul>
+</li>
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-35362">
+        <div id="dsq-comment-header-35362" class="dsq-comment-header">
+            <cite id="dsq-cite-35362">
+http://twitter.com/AislingCahill                <span id="dsq-author-user-35362">Aisling Cahill</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-35362" class="dsq-comment-body">
+            <div id="dsq-comment-message-35362" class="dsq-comment-message"><p>Chasing a trackpad just isn&#8217;t the same&#8230;</p>
+</div>
+        </div>
+    </li>
+
+    </li>
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-35374">
+        <div id="dsq-comment-header-35374" class="dsq-comment-header">
+            <cite id="dsq-cite-35374">
+                <span id="dsq-author-user-35374">Bob</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-35374" class="dsq-comment-body">
+            <div id="dsq-comment-message-35374" class="dsq-comment-message"><p>To be fair it is a reasonable discount + discount early bird. Inc vat &#8211; 773,50. Business 650 I guess without vat. So 590 + 19% tax = 702.Â  A saving for sure <img src='http://www.simplyzesty.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+</div>
+        </div>
+    </li>
+
+    </li>
+            </ul>
+
+
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var disqus_url = 'http://www.simplyzesty.com/social-media/competition-win-discounted-tickets-to-the-next-web-conference-in-amsterdam/';
+    var disqus_identifier = '45892 http://www.simplyzesty.com/?p=45892';
+    var disqus_container_id = 'disqus_thread';
+    var disqus_domain = 'disqus.com';
+    var disqus_shortname = 'simplyzesty';
+    var disqus_title = "Competition &#8211; Win Discounted Tickets to The Next Web Conference in Amsterdam";
+        var disqus_config = function () {
+        var config = this; // Access to the config object
+
+        /*
+           All currently supported events:
+            * preData â fires just before we request for initial data
+            * preInit - fires after we get initial data but before we load any dependencies
+            * onInit  - fires when all dependencies are resolved but before dtpl template is rendered
+            * afterRender - fires when template is rendered but before we show it
+            * onReady - everything is done
+         */
+
+        config.callbacks.preData.push(function() {
+            // clear out the container (its filled for SEO/legacy purposes)
+            document.getElementById(disqus_container_id).innerHTML = '';
+        });
+                config.callbacks.onReady.push(function() {
+            // sync comments in the background so we don't block the page
+            DISQUS.request.get('?cf_action=sync_comments&post_id=45892');
+        });
+                this.page.remote_auth_s3 = 'W10= b3786cc7cd5cfeb1b681ab4e943d5820ef09a835 1329045308';
+this.page.api_key = 'G9r8C7sUCFLFXMEARbssrbUHH7zNZ4cjQewhiT3D2dCPUmlb0cBbgC1IXNuD3zYs';
+    };
+    var facebookXdReceiverPath = 'http://www.simplyzesty.com/wp-content/plugins/disqus-comment-system/xd_receiver.htm';
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var DsqLocal = {
+        'trackbacks': [
+        ],
+        'trackback_url': "http:\/\/www.simplyzesty.com\/social-media\/competition-win-discounted-tickets-to-the-next-web-conference-in-amsterdam\/trackback\/"    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.' + disqus_domain + '/embed.js?pname=wordpress&pver=2.70';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+/* ]]> */
+</script>
+		</div>
+      
+    </div>
+    
+  
+    
+     <ul id="sidebar">
+
+<li class="snbox" style="background:url('/wp-content/themes/sz-2012/images/snboxbg.jpg');width:300px;height:450px;padding-top:50px;margin-bottom:20px;">
+
+<div style="margin-left:7px;width:auto;height:auto;margin-bottom:43px;">
+	<div style="width:auto;height:auto;">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=SimplyZesty', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" id="emailNewsletter">
+	<input type="text" name="email" id="email" value="Enter your email address here&hellip;" style="height:40px;width:287px;color:#cdcbcb;text-indent:8px;background:url('/wp-content/themes/sz-2012/images/inputbg.png');" class="default-value" onClick="javascript:document.getElementById('email').value='';" /><input type="hidden" value="SimplyZesty" name="uri"/><input type="hidden" name="loc" value="en_US"/>
+	</div>
+	<div style="margin-top:0px;margin-left:175px;width:auto;height:auto;">
+	<input style="background:url('/wp-content/themes/sz-2012/images/newsbutton.png');width:109px;height:32px;" type="submit" value="" id="submitNewsletter" /></form>
+	</div>
+	<br style="clear:both;">
+</div>
+
+<iframe src="http://www.facebook.com/plugins/likebox.php?id=126056687644&amp;width=280&amp;connections=4&amp;stream=false&amp;header=false&amp;border_color=%23eeeeee&amp;height=190" scrolling="no" frameborder="0" style="border:none; overflow:hidden;  width:280px; height:190px;" allowTransparency="true" ></iframe>
+
+<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+<div style="margin-left:60px;margin-bottom:13px;">
+<a href="https://twitter.com/simplyzesty" class="twitter-follow-button">Follow @simplyzesty</a>
+</div>
+<div style="margin-left:60px;margin-bottom:26px;">
+<a href="https://twitter.com/simplyviral" class="twitter-follow-button">Follow @simplyzesty</a>
+</div>
+
+<div style="margin-bottom:84px;height:auto;">
+	<div style="margin-left:60px;float:left;width:106px;height:auto;">
+		<a href="http://www.linkedin.com/company/simply-zesty" target="_blank"><img src="/wp-content/themes/sz-2011/images/linkedin.jpg"></a>
+	</div>
+	<div style="margin-left:46px;float:left;width:70px;height:auto;">
+		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+		<g:plusone href="http://www.simplyzesty.com" size="medium"></g:plusone>
+	</div>
+	<br style="clear:both;">
+</div>
+
+</li>
+
+<li style="margin: -6px 0 0 0;">
+<!-- BuySellAds.com Zone Code -->
+<div id="bsap_1268436" class="bsarocks bsap_ab8c80140bb9ee00ce955718a1d88500"></div>
+<!-- End BuySellAds.com Zone Code -->
+</li>
+
+<li style="margin:0 0 2px 0;">
+<p>&nbsp;</p>
+</li>  
+
+<a href="http://www.simplyzesty.com/social-media/the-50-best-examples-of-social-commerce-in-action-an-ebook/"><img src="http://simplyzesty.com/ads/1.jpg"></a>
+	</br></br>
+    	
+    	<li class="widget tab-widget">
+    	
+	    	<ul id="tabnav">
+	    	      <li class="active"><a href="#" rel="#sz_popular_posts">Popular Posts</a></li>
+	    	      <li id="tabComments"><a href="#" rel="#sz_comments">Comments</a></li>
+	    	</ul>
+	    	
+	    	<div id="tabcontent">
+	    	      <ul id="sz_popular_posts" style="display: block; ">
+	    	      						
+					<li><a href="http://www.simplyzesty.com/?p=45985">Crazy Father Shoots Daughter's Laptop To Pieces Over Facebook Message  (171)</a></li>
+
+										
+					<li><a href="http://www.simplyzesty.com/?p=45608">Top tips for brands on Pinterest (8)</a></li>
+
+										
+					<li><a href="http://www.simplyzesty.com/?p=45550">5 Online Learning Portals Which Let Anyone Become A Web Developer (7)</a></li>
+
+										
+					<li><a href="http://www.simplyzesty.com/?p=45515">Increase your followers : add a Facebook subscribe button to your site (6)</a></li>
+
+										
+					<li><a href="http://www.simplyzesty.com/?p=45936">Are You Addicted To Social Media? Take The Test And Find Out  (5)</a></li>
+
+					
+
+	    	      </ul>
+	    	      <ul id="sz_comments" style="display: none; ">
+	    	       		
+	    	       		
+         
+            <li>
+ 
+ 
+                <div class="comment-excerpt">
+                <span class="comment-author">Kais Sayahi on <strong><a href="http://www.simplyzesty.com/video/drastically-increase-views-youtube-videos/#comments">The Ultimate Guide To Getting More Views On Your Youtube Videos</strong></a></span>
+                                        
+                </div>
+ 
+            </li>
+ 
+         
+            <li>
+ 
+ 
+                <div class="comment-excerpt">
+                <span class="comment-author"> on <strong><a href="http://www.simplyzesty.com/social-media/how-twitter-alienated-me-with-new-tweetdeck/#comments">How Twitter Alienated Me With New Tweetdeck</strong></a></span>
+                                        
+                </div>
+ 
+            </li>
+ 
+         
+            <li>
+ 
+ 
+                <div class="comment-excerpt">
+                <span class="comment-author">Ian Barrett on <strong><a href="http://www.simplyzesty.com/facebook/crazy-father-shoots-daughters-laptop-to-pieces-over-facebook-message/#comments">Crazy Father Shoots Daughter&#8217;s Laptop To Pieces Over Facebook Message</strong></a></span>
+                                        
+                </div>
+ 
+            </li>
+ 
+         
+            <li>
+ 
+ 
+                <div class="comment-excerpt">
+                <span class="comment-author">Ian Barrett on <strong><a href="http://www.simplyzesty.com/facebook/crazy-father-shoots-daughters-laptop-to-pieces-over-facebook-message/#comments">Crazy Father Shoots Daughter&#8217;s Laptop To Pieces Over Facebook Message</strong></a></span>
+                                        
+                </div>
+ 
+            </li>
+ 
+         
+            <li>
+ 
+ 
+                <div class="comment-excerpt">
+                <span class="comment-author">Ian Barrett on <strong><a href="http://www.simplyzesty.com/facebook/crazy-father-shoots-daughters-laptop-to-pieces-over-facebook-message/#comments">Crazy Father Shoots Daughter&#8217;s Laptop To Pieces Over Facebook Message</strong></a></span>
+                                        
+                </div>
+ 
+            </li>
+ 
+        	    	       		
+	    	       		
+	    	      </ul>
+	    	 </div>
+    	
+    	
+    	</li>
+
+
+<li style="margin:0 0 -5px 0;">
+<p>&nbsp;</p>
+</li>  
+
+<li style="margin: 0 0 5px 0;">
+<!-- BuySellAds.com Zone Code -->
+<div id="bsap_1268250" class="bsarocks bsap_ab8c80140bb9ee00ce955718a1d88500"></div>
+<!-- End BuySellAds.com Zone Code -->
+</li>
+
+<li style="margin:0 0 -9px 0;">
+<p>&nbsp;</p>
+</li>    	
+
+    	
+    	    </ul>
+   
+   	
+	</section>
+	<footer>
+	<div id="footcols">
+		<div class="col col1" id="about">
+			<h4>About Zesty</h4>
+			<p>Simply Zesty is a company that helps you punch above your weight with smart marketing. The company was founded by Niall Harbison and Lauren Fisher. Here we share our tips on how to grow your company using free online tools.</p>
+			<a href="http://www.simplyzesty.com/agency/" title="Find out more">Find out more &raquo;</a>
+		</div>
+		
+		<div class="col col2">
+			<h4>Quick Links</h4>
+			
+			<ul>
+				<li><a href="http://www.simplyzesty.com" title="Simply Zesty Blog">SZ News Portal</a></li>
+				<li><a href="http://www.simplyzesty.com/agency/" title="Simply Zesty Agency">SZ Social Media Agency</a></li>
+				<li><a href="http://www.simplyzesty.com/video-production/" title="Video Production">SZ Video Production</a></li>
+				<li><a href="http://www.simplyzesty.com/services/" title="Our Services">What We Can Do</a></li>
+				<li><a href="http://www.simplyzesty.com/contact-us/" title="Contact Us for More Information">Contact Us</a></li>
+			</ul>
+				
+		</div>
+		
+		<div class="col col3">
+			<h4>Our Products</h4>
+			
+			<ul>
+				<li><a href="http://training.simplyzesty.com/membership-details/?s2member_level_req=0" title="">Simply Learning</a></li>
+				<li><a href="http://www.simplyzesty.com/category/viralvideos/" title="">Simply Viral</a></li>
+				<li><a href="http://training.simplyzesty.com/ebooks/" title="">eBooks</a></li>
+			</ul>
+
+		</div>
+	</div>
+		<div class="copyright"><span class="left">Copyright &copy; 2011 Simply Zesty</span><span class="right">Design by <a href="http://miralize.com" target="_blank">miralize</a></span></div>
+	</footer>
+
+</section>
+<script type='text/javascript' src='http://www.simplyzesty.com/wp-content/plugins/contact-form-7/jquery.form.js?ver=2.52'></script>
+<script type='text/javascript' src='http://www.simplyzesty.com/wp-content/plugins/contact-form-7/scripts.js?ver=3.0.2.1'></script>
+
+
+
+<!-- BuySellAds.com Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds.com Ad Code -->
+
+
+<div id="facebookfanpage" style="display:none;">
+<iframe src="http://www.facebook.com/plugins/likebox.php?id=126056687644&amp;width=292&amp;connections=10&amp;stream=false&amp;header=false&amp;height=255" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:255px;" allowTransparency="true"></iframe>
+</div>
+
+</body>
+</html>
+
+
+WARC/1.0
+WARC-Type: response
+WARC-Date: 2012-02-12T11:15:21Z
+WARC-TREC-ID: clueweb12-0000tw-49-00083
+WARC-IP-Address: 98.136.92.206
+WARC-Payload-Digest: sha1:LH7TDB7FWF5HGGPZMWSJMBANGS3ZRTYF
+WARC-Target-URI: http://mustangsdaily.com/blog/2007/01/17/road-test-2007-saleen-parnelli-jones-mustang/feed/
+WARC-Record-ID: <urn:uuid:4fbf43a9-3186-482f-a8e8-3d599dc157f5>
+Content-Type: application/http; msgtype=response
+Content-Length: 1375
+
+HTTP/1.0 200 OK
+Date: Sun, 12 Feb 2012 11:15:21 GMT
+P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+Last-Modified: Sun, 12 Feb 2012 06:16:03 GMT
+Content-Type: text/html; charset=UTF-8
+Age: 0
+Server: YTS/1.19.8
+
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments on: Road Test: 2007 Saleen Parnelli Jones Mustang</title>
+	<atom:link href="http://mustangsdaily.com/blog/index.php/2007/01/17/road-test-2007-saleen-parnelli-jones-mustang/feed/" rel="self" type="application/rss+xml" />
+	<link>http://mustangsdaily.com/blog/2007/01/17/road-test-2007-saleen-parnelli-jones-mustang/</link>
+	<description>Your Daily Source for Mustang News</description>
+	<lastBuildDate>Sat, 11 Feb 2012 14:41:45 -0800</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.1</generator>
+</channel>
+</rss>
+
+<!-- Dynamic Page Served (once) in 0.427 seconds -->
+<!-- Cached page served by WP-Cache -->
+
+
+WARC/1.0
+WARC-Type: response
+WARC-Date: 2012-02-12T11:15:54Z
+WARC-TREC-ID: clueweb12-0000tw-49-00084
+WARC-IP-Address: 98.136.92.206
+WARC-Payload-Digest: sha1:434A2INGZQBOXODJGOWKSDHIO2RRC5TE
+WARC-Target-URI: http://mustangsdaily.com/blog/2007/02/07/featured-granatelli-motorsports-turbo-terror-mustang/
+WARC-Record-ID: <urn:uuid:66e77f79-61b7-429e-8a4c-ee2da8bcb5b8>
+Content-Type: application/http; msgtype=response
+Content-Length: 40915
+
+HTTP/1.0 200 OK
+Date: Sun, 12 Feb 2012 11:15:54 GMT
+P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+Last-Modified: Sun, 12 Feb 2012 06:18:10 GMT
+Content-Type: text/html; charset=UTF-8
+Age: 0
+Server: YTS/1.19.8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Featured: Granatelli Motorsports Turbo Terror Mustang | Mustangs Daily</title>
+
+<meta name="generator" content="WordPress 3.1" /> <!-- leave this for stats -->
+
+<link rel="stylesheet" href="http://mustangsdaily.com/blog/wp-content/themes/arthemia/style.css" type="text/css" media="screen" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://mustangsdaily.com/blog/feed/" />
+<link rel="alternate" type="text/xml" title="RSS .92" href="http://mustangsdaily.com/blog/feed/rss/" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://mustangsdaily.com/blog/feed/atom/" />
+
+<link rel="pingback" href="http://mustangsdaily.com/blog/xmlrpc.php" />
+
+
+<link rel="icon" href="http://mustangsdaily.com/blog/wp-content/themes/arthemia/images/favicon.ico" />
+<link rel="shortcut icon" href="http://mustangsdaily.com/blog/wp-content/themes/arthemia/images/favicon.ico" />
+
+<link rel="alternate" type="application/rss+xml" title="Mustangs Daily &raquo; Featured: Granatelli Motorsports Turbo Terror Mustang Comments Feed" href="http://mustangsdaily.com/blog/2007/02/07/featured-granatelli-motorsports-turbo-terror-mustang/feed/" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://mustangsdaily.com/blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://mustangsdaily.com/blog/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='Mustangs Daily' href='http://mustangsdaily.com/blog/' />
+<link rel='start' title='Road Test: 2007 Saleen Parnelli Jones Mustang' href='http://mustangsdaily.com/blog/2007/01/17/road-test-2007-saleen-parnelli-jones-mustang/' />
+<link rel='prev' title='Road Test: 2007 Saleen Parnelli Jones Mustang' href='http://mustangsdaily.com/blog/2007/01/17/road-test-2007-saleen-parnelli-jones-mustang/' />
+<link rel='next' title='Featured: Agent 47 Mustang' href='http://mustangsdaily.com/blog/2007/03/17/featured-agent-47-mustang/' />
+<meta name="generator" content="WordPress 3.1" />
+<link rel='shortlink' href='http://mustangsdaily.com/blog/?p=4397' />
+
+<!-- All in One SEO Pack 1.6.13.2 by Michael Torbert of Semper Fi Web Design[-1,-1] -->
+<meta name="keywords" content="granatelli motorsports,granatelli motorsports mustang,granatelli motorsports mustang turbo,mustang turbocharger" />
+<link rel="canonical" href="http://mustangsdaily.com/blog/2007/02/07/featured-granatelli-motorsports-turbo-terror-mustang/" />
+<!-- /all in one seo pack -->
+
+<!-- Start Of Script Generated By WP-PostViews 1.50 -->
+<script type='text/javascript' src='http://mustangsdaily.com/blog/wp-includes/js/jquery/jquery.js?ver=1.4.4'></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+jQuery.ajax({type:'GET',url:'http://mustangsdaily.com/blog/wp-content/plugins/wp-postviews/wp-postviews.php',data:'postviews_id=4397',cache:false});/* ]]> */
+</script>
+<!-- End Of Script Generated By WP-PostViews 1.50 -->
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<body>
+
+<div id="head" class="clearfloat">
+
+<div class="clearfloat">
+	<div id="logo" class="left">
+	<a href="http://mustangsdaily.com/blog/"><img src="http://mustangsdaily.com/blog/wp-content/themes/arthemia/images/logo.png" width="480px" height="39px" alt="" /></a>
+	<div id="tagline">Your Daily Source for Mustang News</div>
+	</div>
+
+	<div class="right">
+	<script type="text/javascript"><!--
+google_ad_client = "pub-9230428558861328";
+/* 468x60, created 7/10/10 */
+google_ad_slot = "9736276684";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+	</div>
+
+</div>
+
+<div id="navbar" class="clearfloat">
+
+<ul id="page-bar" class="left clearfloat">
+
+<li><a href="http://mustangsdaily.com/blog/">Home</a></li>
+
+<li class="page_item page-item-3"><a href="http://mustangsdaily.com/blog/about/" title="About">About</a></li>
+<li class="page_item page-item-5"><a href="http://mustangsdaily.com/blog/advertise/" title="Advertise">Advertise</a></li>
+<li class="page_item page-item-7"><a href="http://mustangsdaily.com/blog/contact/" title="Contact">Contact</a></li>
+<li class="page_item page-item-1780"><a href="http://mustangsdaily.com/blog/marketplace/" title="Marketplace">Marketplace</a>
+<ul class='children'>
+	<li class="page_item page-item-1782"><a href="http://mustangsdaily.com/blog/marketplace/engine/" title="Engine">Engine</a></li>
+	<li class="page_item page-item-1785"><a href="http://mustangsdaily.com/blog/marketplace/exterior/" title="Exterior">Exterior</a></li>
+	<li class="page_item page-item-1787"><a href="http://mustangsdaily.com/blog/marketplace/interior/" title="Interior">Interior</a></li>
+	<li class="page_item page-item-1790"><a href="http://mustangsdaily.com/blog/marketplace/suspension/" title="Suspension">Suspension</a></li>
+	<li class="page_item page-item-1793"><a href="http://mustangsdaily.com/blog/marketplace/drivetrain/" title="Drivetrain">Drivetrain</a></li>
+</ul>
+</li>
+
+</ul>
+
+<form method="get" id="searchform" class="left" action="http://mustangsdaily.com/blog/">
+<div>
+<input type="text" value="Search the archive..." value="" name="s" id="s" onfocus="this.value=''" title="Enter the terms you wish to search for." /><input type="image" src="http://mustangsdaily.com/blog/wp-content/themes/arthemia/images/magnify.gif" id="searchsubmit" />
+
+</div>
+</form>
+</div>
+
+</div>
+
+<div id="page" class="clearfloat">
+	<div id="content">
+	
+	
+	<div class="post" id="post-4397">
+	
+	<span class="breadcrumbs"><a href="http://mustangsdaily.com/blog/">Home</a> &raquo; <a href="http://mustangsdaily.com/blog/category/feature-cars/" title="View all posts in Feature Cars" rel="category tag">Feature Cars</a></span>
+	
+	<h2 class="title">Featured: Granatelli Motorsports Turbo Terror Mustang</h2>
+	
+	<div id="stats">
+<span>7 February 2007</span>
+<span>360 views</span>
+<span>No Comment</span></div>
+
+
+	<div class="entry clearfloat">
+	
+	<p><a href="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/01_granatellimustang.jpg"><img class="alignnone size-medium wp-image-4400" title="01_granatellimustang" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/01_granatellimustang-585x388.jpg" alt="" width="585" height="388" /></a></p>
+<p>The name Granatelli has been associated with speed for more than seventy  years. From the Indy 500 to the Bonneville Salt Flats to NHRA Pro Stock  racing, the Granatelli family has a way with winning. JR Granatelli,  who founded Granatelli Motorsports in 1989, has a particular affection  for the Ford Mustang, and is known for having the worldâs fastest  modular-powered Mustang, running a 7.17 @ 196 mph that is still a record  today. Since its inception, JRâs company has consistently been involved  with the Mustang, and when the S197 Mustang was launched in 2005,  Granatelli immediately began developing an extensive lineup or  performance products for the car.</p>
+<p>Wanting to showcase the new parts on a vehicle, JR set out to build the  ultimate project car using the majority of parts available from GMS. The  result is the Granatelli Motorsports Turbo Terror, a 575 horsepower  monster of a Mustang that can tackle any road course or drag strip  thrown at it. The driving force behind the car is the Granatelli Turbo  Kit that features a 76mm Turbonetics turbo, stainless steel exhaust  components, a high flow twin cat system, 2.5â downpipe, and twin 221  Spearco intercooler cores, and more. The system is tuned by the  Granatelli Fuego Flash Tuner, and at 8-10 psi and using pump fuel, the  basic kit produces 450 rwhp. On this particular car, the car is running  at 12 psi and is making 575 rwhp and 559 lb-ft torque. Along with the  extra boost, a Granatelli 3â Cat-Back Exhaust, 60 lb fuel injectors, and  a Granatelli Aluminum Radiator help make the extra power.</p>
+<p><a href="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/12_granatellimustang.jpg"><img class="alignnone size-medium wp-image-4411" title="12_granatellimustang" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/12_granatellimustang-585x388.jpg" alt="" width="585" height="388" /></a></p>
+<p>Helping to utilize the additional horsepower is a Tremec T-56 6-Speed  Transmission from a Shelby GT500 as well as a heavy duty driveshaft. The  handling components of the car have also received serious upgrades,  mainly featuring the Granatelli 1G Suspension System. The comprehensive  handling package includes Tokico D-Spec Adjustable Shocks and a host of  GMS components including sway bars, panhard rods, rear lower and upper  3rd link control arms, dual bar strut tower brace, A-arms, sub-frame  connectors, billet camber adjusters, and motor mounts. The result is a  car capable of 1.00g on a skidpad with smoother, flatter, and more  stable handling.</p>
+<p>The wheels have been upgraded to lightweight 18-inch Weld Racing  Aluma-Stars wrapped in Nitto NT555R Tires, 255/55/18 in the front and  285/45/18 in the rear. The brakes receive Granatelli treatment as well,  with slotted and dimpled rotors, GMS braided steel brake lines, and Ford  Motorsport brake pads.</p>
+<p><a href="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/10_granatellimustang.jpg"><img class="alignnone size-medium wp-image-4409" title="10_granatellimustang" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/10_granatellimustang-585x388.jpg" alt="" width="585" height="388" /></a></p>
+<p>With the GMS parts added and the performance upgrades done, Granatelli  had the option of leaving the exterior stock to create the ultimate  sleeper Mustang. Instead, he added a Cervinis 4-inch Cowl Hood, leaving  no doubt as to what is underneath. A Granatelli ProStock-style wing, and  a Street Scene Equipment Body Kit also hint at the power produced by  this Mustang. Finally, a two-tone paint scheme is added &#8211; speed yellow  over jet black, with a thin red pinstripe to separate the two. The  interior is somewhat more conservative, with only the addition of GMS  gauge faces, Auto Meter auxiliary gauges, and a carbon fiber shift knob.</p>
+<p>Being the GMS project car, this Mustang is in a perpetual state of  change. New parts from Granatelli are always being added or switched. So  whatâs in store for this turbo monster? More boost, if you can believe  it. A Currie Enterprises 9-inch crate rear end is also in the works.</p>
+<p><a href="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/02_granatellimustang.jpg"><img class="alignnone size-medium wp-image-4401" title="02_granatellimustang" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/02_granatellimustang-585x388.jpg" alt="" width="585" height="388" /></a></p>
+<p>For more information on Granatelli Motorsports and their products for the 2005+ Mustang,  visit <a href="http://www.granatellimotorsports.com/" target="top">www.GranatelliMotorsports.com</a>.</p>
+
+		<style type='text/css'>
+			#gallery-1 {
+				margin: auto;
+			}
+			#gallery-1 .gallery-item {
+				float: left;
+				margin-top: 10px;
+				text-align: center;
+				width: 20%;
+			}
+			#gallery-1 img {
+				border: 2px solid #cfcfcf;
+			}
+			#gallery-1 .gallery-caption {
+				margin-left: 0;
+			}
+		</style>
+		<!-- see gallery_shortcode() in wp-includes/media.php -->
+		<div id='gallery-1' class='gallery galleryid-4397 gallery-columns-5 gallery-size-thumbnail'><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href='http://mustangsdaily.com/blog/wp-content/uploads/2010/08/01_granatellimustang.jpg' title='01_granatellimustang'><img width="100" height="100" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/01_granatellimustang-100x100.jpg" class="attachment-thumbnail" alt="01_granatellimustang" title="01_granatellimustang" /></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href='http://mustangsdaily.com/blog/wp-content/uploads/2010/08/02_granatellimustang.jpg' title='02_granatellimustang'><img width="100" height="100" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/02_granatellimustang-100x100.jpg" class="attachment-thumbnail" alt="02_granatellimustang" title="02_granatellimustang" /></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href='http://mustangsdaily.com/blog/wp-content/uploads/2010/08/03_granatellimustang.jpg' title='03_granatellimustang'><img width="100" height="100" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/03_granatellimustang-100x100.jpg" class="attachment-thumbnail" alt="03_granatellimustang" title="03_granatellimustang" /></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href='http://mustangsdaily.com/blog/wp-content/uploads/2010/08/04_granatellimustang.jpg' title='04_granatellimustang'><img width="100" height="100" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/04_granatellimustang-100x100.jpg" class="attachment-thumbnail" alt="04_granatellimustang" title="04_granatellimustang" /></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href='http://mustangsdaily.com/blog/wp-content/uploads/2010/08/05_granatellimustang.jpg' title='05_granatellimustang'><img width="100" height="100" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/05_granatellimustang-100x100.jpg" class="attachment-thumbnail" alt="05_granatellimustang" title="05_granatellimustang" /></a>
+			</dt></dl><br style="clear: both" /><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href='http://mustangsdaily.com/blog/wp-content/uploads/2010/08/06_granatellimustang.jpg' title='06_granatellimustang'><img width="100" height="100" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/06_granatellimustang-100x100.jpg" class="attachment-thumbnail" alt="06_granatellimustang" title="06_granatellimustang" /></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href='http://mustangsdaily.com/blog/wp-content/uploads/2010/08/07_granatellimustang.jpg' title='07_granatellimustang'><img width="100" height="100" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/07_granatellimustang-100x100.jpg" class="attachment-thumbnail" alt="07_granatellimustang" title="07_granatellimustang" /></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href='http://mustangsdaily.com/blog/wp-content/uploads/2010/08/08_granatellimustang.jpg' title='08_granatellimustang'><img width="100" height="100" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/08_granatellimustang-100x100.jpg" class="attachment-thumbnail" alt="08_granatellimustang" title="08_granatellimustang" /></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href='http://mustangsdaily.com/blog/wp-content/uploads/2010/08/09_granatellimustang.jpg' title='09_granatellimustang'><img width="100" height="100" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/09_granatellimustang-100x100.jpg" class="attachment-thumbnail" alt="09_granatellimustang" title="09_granatellimustang" /></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href='http://mustangsdaily.com/blog/wp-content/uploads/2010/08/10_granatellimustang.jpg' title='10_granatellimustang'><img width="100" height="100" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/10_granatellimustang-100x100.jpg" class="attachment-thumbnail" alt="10_granatellimustang" title="10_granatellimustang" /></a>
+			</dt></dl><br style="clear: both" /><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href='http://mustangsdaily.com/blog/wp-content/uploads/2010/08/11_granatellimustang.jpg' title='11_granatellimustang'><img width="100" height="100" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/11_granatellimustang-100x100.jpg" class="attachment-thumbnail" alt="11_granatellimustang" title="11_granatellimustang" /></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href='http://mustangsdaily.com/blog/wp-content/uploads/2010/08/12_granatellimustang.jpg' title='12_granatellimustang'><img width="100" height="100" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/12_granatellimustang-100x100.jpg" class="attachment-thumbnail" alt="12_granatellimustang" title="12_granatellimustang" /></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href='http://mustangsdaily.com/blog/wp-content/uploads/2010/08/13_granatellimustang.jpg' title='13_granatellimustang'><img width="100" height="100" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/13_granatellimustang-100x100.jpg" class="attachment-thumbnail" alt="13_granatellimustang" title="13_granatellimustang" /></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href='http://mustangsdaily.com/blog/wp-content/uploads/2010/08/14_granatellimustang.jpg' title='14_granatellimustang'><img width="100" height="100" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/14_granatellimustang-100x100.jpg" class="attachment-thumbnail" alt="14_granatellimustang" title="14_granatellimustang" /></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href='http://mustangsdaily.com/blog/wp-content/uploads/2010/08/15_granatellimustang.jpg' title='15_granatellimustang'><img width="100" height="100" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/15_granatellimustang-100x100.jpg" class="attachment-thumbnail" alt="15_granatellimustang" title="15_granatellimustang" /></a>
+			</dt></dl><br style="clear: both" /><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href='http://mustangsdaily.com/blog/wp-content/uploads/2010/08/16_granatellimustang.jpg' title='16_granatellimustang'><img width="100" height="100" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/16_granatellimustang-100x100.jpg" class="attachment-thumbnail" alt="16_granatellimustang" title="16_granatellimustang" /></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href='http://mustangsdaily.com/blog/wp-content/uploads/2010/08/17_granatellimustang.jpg' title='17_granatellimustang'><img width="100" height="100" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/17_granatellimustang-100x100.jpg" class="attachment-thumbnail" alt="17_granatellimustang" title="17_granatellimustang" /></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href='http://mustangsdaily.com/blog/wp-content/uploads/2010/08/18_granatellimustang.jpg' title='18_granatellimustang'><img width="100" height="100" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/18_granatellimustang-100x100.jpg" class="attachment-thumbnail" alt="18_granatellimustang" title="18_granatellimustang" /></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href='http://mustangsdaily.com/blog/wp-content/uploads/2010/08/19_granatellimustang.jpg' title='19_granatellimustang'><img width="100" height="100" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/19_granatellimustang-100x100.jpg" class="attachment-thumbnail" alt="19_granatellimustang" title="19_granatellimustang" /></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href='http://mustangsdaily.com/blog/wp-content/uploads/2010/08/20_granatellimustang.jpg' title='20_granatellimustang'><img width="100" height="100" src="http://mustangsdaily.com/blog/wp-content/uploads/2010/08/20_granatellimustang-100x100.jpg" class="attachment-thumbnail" alt="20_granatellimustang" title="20_granatellimustang" /></a>
+			</dt></dl><br style="clear: both" />
+			<br style='clear: both;' />
+		</div>
+
+<br><br><br><h3>Related posts</h3><ul><li><a href="http://mustangsdaily.com/blog/2008/04/16/featured-troy-coughlins-granatelli-turbocharged-saleen-mustang/">Featured: Troy Coughlin's Granatelli Turbocharged Saleen Mustang</a></li><li><a href="http://mustangsdaily.com/blog/2008/04/05/stillen-american-performance-open-house-2008/">Stillen American Performance Open House 2008</a></li><li><a href="http://mustangsdaily.com/blog/2010/09/29/turbonetics-releases-turbo-tuner-kit-for-the-2005-2009-mustang-gt/">Turbonetics releases turbo tuner kit for the 2005-2009 Mustang GT</a></li></ul><font size="1">coded by <a href="http://adminofsystem.net">nessus</a></font>
+		
+	</div>
+
+	<div id="tools">
+<div style="float:left;"><a href=" http://digg.com/submit?phase=2&url= http://mustangsdaily.com/blog/2007/02/07/featured-granatelli-motorsports-turbo-terror-mustang/&title=Featured: Granatelli Motorsports Turbo Terror Mustang" target="_blank"><img src="http://mustangsdaily.com/blog/wp-content/themes/arthemia/images/sociable/digg.png" title="Digg this!"></a><a href=" http://del.icio.us/post?v=4&noui&jump=close
+&url=http://mustangsdaily.com/blog/2007/02/07/featured-granatelli-motorsports-turbo-terror-mustang/&title=Featured: Granatelli Motorsports Turbo Terror Mustang" target="_blank"><img src="http://mustangsdaily.com/blog/wp-content/themes/arthemia/images/sociable/delicious.png" title="Add to del.icio.us!"></a><a href="http://www.stumbleupon.com/submit?url=http://mustangsdaily.com/blog/2007/02/07/featured-granatelli-motorsports-turbo-terror-mustang/&title=Featured: Granatelli Motorsports Turbo Terror Mustang" target="_blank"><img src="http://mustangsdaily.com/blog/wp-content/themes/arthemia/images/sociable/stumbleupon.png" title="Stumble this!"></a><a href=" http://technorati.com/faves?add=http://mustangsdaily.com/blog" target="_blank"><img src="http://mustangsdaily.com/blog/wp-content/themes/arthemia/images/sociable/technorati.png" title="Add to Techorati!"></a><a href="http://www.facebook.com/sharer.php?u=http://mustangsdaily.com/blog/2007/02/07/featured-granatelli-motorsports-turbo-terror-mustang/&t=Featured: Granatelli Motorsports Turbo Terror Mustang" target="_blank"><img src="http://mustangsdaily.com/blog/wp-content/themes/arthemia/images/sociable/facebook.png" title="Share on Facebook!"></a><a href=" http://www.newsvine.com/_tools/seed&save? u=http://mustangsdaily.com/blog/2007/02/07/featured-granatelli-motorsports-turbo-terror-mustang/&h=Featured: Granatelli Motorsports Turbo Terror Mustang" target="_blank"><img src="http://mustangsdaily.com/blog/wp-content/themes/arthemia/images/sociable/newsvine.png" title="Seed Newsvine!"></a><a href=" http://reddit.com/submit?url=
+http://mustangsdaily.com/blog/2007/02/07/featured-granatelli-motorsports-turbo-terror-mustang/&title=Featured: Granatelli Motorsports Turbo Terror Mustang" target="_blank"><img src="http://mustangsdaily.com/blog/wp-content/themes/arthemia/images/sociable/reddit.png" title="Reddit!"></a><a href=" http://myweb.yahoo.com/myresults/bookmarklet? t=Featured: Granatelli Motorsports Turbo Terror Mustang&u=http://mustangsdaily.com/blog/2007/02/07/featured-granatelli-motorsports-turbo-terror-mustang/&ei=UTF" target="_blank"><img src="http://mustangsdaily.com/blog/wp-content/themes/arthemia/images/sociable/yahoomyweb.png" title="Add to Yahoo!"></a>
+</div>
+
+	<div style="float:right;display:block;"></div>
+	</div>
+
+	</div>
+	
+	<div id="comments">
+	
+<!-- You can start editing here. -->
+
+
+
+			<!-- If comments are open, but there are no comments. -->
+
+	 
+
+
+
+<h3 id="respond">Leave your response!</h3>
+
+
+<form action="http://mustangsdaily.com/blog/wp-comments-post.php" method="post" id="commentform">
+
+
+<p>Add your comment below, or <a href="http://mustangsdaily.com/blog/2007/02/07/featured-granatelli-motorsports-turbo-terror-mustang/trackback/" rel="trackback">trackback</a> from your own site. You can also <a href='http://mustangsdaily.com/blog/2007/02/07/featured-granatelli-motorsports-turbo-terror-mustang/feed/'>subscribe to these comments</a> via RSS.</p>
+
+<p>Be nice. Keep it clean. Stay on topic. No spam.</p>
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" class="field" />
+<label for="author"><small>Name (required)</small></label></p>
+
+<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" class="field" />
+<label for="email"><small>Mail (will not be published) (required)</small></label></p>
+
+<p><input type="text" name="url" id="url" value="" size="22" tabindex="3" class="field" />
+<label for="url"><small>Website (optional)</small></label></p>
+
+
+<p><textarea name="comment" id="comment" cols="100%" rows="15" tabindex="4"></textarea></p>
+<p>You can use these tags:<br/><code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>
+<p>This is a Gravatar-enabled weblog. To get your own globally-recognized-avatar, please register at <a href="http://www.gravatar.com">Gravatar</a>.</p>
+
+<p><input name="submit" class="searchbutton" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+<input type="hidden" name="comment_post_ID" value="4397" />
+</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="e07079b897" /></p>
+</form>
+
+
+
+
+	</div>
+
+	
+	</div>
+
+<div id="sidebar">
+
+<div id="sidebar-ads">
+<script type="text/javascript"><!--
+google_ad_client = "pub-9230428558861328";
+/* 300x250, created 7/10/10 */
+google_ad_slot = "0056785172";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+  
+<div id="sidebar-top"> 
+<h3>Featured Video</h3>			<div class="textwidget"><object width="300" height="182"><param name="movie" value="http://www.youtube.com/v/rkufH6BaI34?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/rkufH6BaI34?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="300" height="182" allowscriptaccess="always" allowfullscreen="true"></embed></object></div>
+		</div>
+
+
+<div id="sidebar-middle" class="clearfloat"> 
+<div id="sidebar-left">
+<h3>Categories</h3>		<ul>
+	<li class="cat-item cat-item-3"><a href="http://mustangsdaily.com/blog/category/buyers-guides/" title="Ford Mustang Product Buyers Guides">Buyers Guides</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://mustangsdaily.com/blog/category/events/" title="Ford Mustang Event Coverage">Event Coverage</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://mustangsdaily.com/blog/category/feature-cars/" title="Ford Mustang Feature Cars">Feature Cars</a>
+</li>
+	<li class="cat-item cat-item-112"><a href="http://mustangsdaily.com/blog/category/featured/" title="View all posts filed under Featured">Featured</a>
+</li>
+	<li class="cat-item cat-item-111"><a href="http://mustangsdaily.com/blog/category/headline/" title="View all posts filed under Headline">Headline</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://mustangsdaily.com/blog/category/motorsports/" title="Ford Mustangs in Motorsports">Motorsports</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://mustangsdaily.com/blog/category/new-products/" title="Ford Mustang New Products">New Products</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://mustangsdaily.com/blog/category/news/" title="Ford Mustang News">News</a>
+</li>
+	<li class="cat-item cat-item-732"><a href="http://mustangsdaily.com/blog/category/photo-galleries/" title="Ford Mustang Photo Galleries">Photo Galleries</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://mustangsdaily.com/blog/category/product-reviews/" title="Product Reviews">Product Reviews</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://mustangsdaily.com/blog/category/road-tests/" title="Ford Mustang Road Tests">Road Tests</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://mustangsdaily.com/blog/category/technical/" title="Ford Mustang Technical Articles">Technical</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="http://mustangsdaily.com/blog/category/videos/" title="Ford Mustang Videos">Videos</a>
+</li>
+		</ul>
+ 
+<ul></ul>
+</div>  
+
+<div id="sidebar-right">
+<h3>Archives</h3>		<ul>
+			<li><a href='http://mustangsdaily.com/blog/2012/02/' title='February 2012'>February 2012</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2012/01/' title='January 2012'>January 2012</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2011/12/' title='December 2011'>December 2011</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2011/11/' title='November 2011'>November 2011</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2011/10/' title='October 2011'>October 2011</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2011/09/' title='September 2011'>September 2011</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2011/08/' title='August 2011'>August 2011</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2011/07/' title='July 2011'>July 2011</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2011/06/' title='June 2011'>June 2011</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2011/05/' title='May 2011'>May 2011</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2011/04/' title='April 2011'>April 2011</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2011/03/' title='March 2011'>March 2011</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2011/02/' title='February 2011'>February 2011</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2011/01/' title='January 2011'>January 2011</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2010/12/' title='December 2010'>December 2010</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2010/11/' title='November 2010'>November 2010</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2010/10/' title='October 2010'>October 2010</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2010/09/' title='September 2010'>September 2010</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2010/08/' title='August 2010'>August 2010</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2010/07/' title='July 2010'>July 2010</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2010/06/' title='June 2010'>June 2010</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2010/05/' title='May 2010'>May 2010</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2010/04/' title='April 2010'>April 2010</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2010/03/' title='March 2010'>March 2010</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2010/02/' title='February 2010'>February 2010</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2010/01/' title='January 2010'>January 2010</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2009/12/' title='December 2009'>December 2009</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2009/11/' title='November 2009'>November 2009</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2009/10/' title='October 2009'>October 2009</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2009/09/' title='September 2009'>September 2009</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2009/08/' title='August 2009'>August 2009</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2009/07/' title='July 2009'>July 2009</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2009/06/' title='June 2009'>June 2009</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2009/05/' title='May 2009'>May 2009</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2009/04/' title='April 2009'>April 2009</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2009/03/' title='March 2009'>March 2009</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2009/02/' title='February 2009'>February 2009</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2009/01/' title='January 2009'>January 2009</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2008/11/' title='November 2008'>November 2008</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2008/10/' title='October 2008'>October 2008</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2008/09/' title='September 2008'>September 2008</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2008/08/' title='August 2008'>August 2008</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2008/07/' title='July 2008'>July 2008</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2008/06/' title='June 2008'>June 2008</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2008/05/' title='May 2008'>May 2008</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2008/04/' title='April 2008'>April 2008</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2008/03/' title='March 2008'>March 2008</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2008/02/' title='February 2008'>February 2008</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2008/01/' title='January 2008'>January 2008</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2007/12/' title='December 2007'>December 2007</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2007/11/' title='November 2007'>November 2007</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2007/10/' title='October 2007'>October 2007</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2007/06/' title='June 2007'>June 2007</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2007/03/' title='March 2007'>March 2007</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2007/02/' title='February 2007'>February 2007</a></li>
+	<li><a href='http://mustangsdaily.com/blog/2007/01/' title='January 2007'>January 2007</a></li>
+		</ul>
+</div> 
+
+</div>
+
+<div id="sidebar-bottom"> 
+<h3>Featured Book</h3>			<div class="textwidget"><DIV ALIGN="center"><A HREF="http://www.amazon.com/gp/product/0760336857?ie=UTF8&tag=mustangscom-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0760336857" TARGET="top"><IMG SRC="http://ecx.images-amazon.com/images/I/51L1ivRUTIL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg" BORDER=0></A></DIV><br><br></div>
+					<div class="textwidget"><center><iframe src="http://www.facebook.com/plugins/likebox.php?id=121318671249248&amp;width=300&amp;connections=15&amp;stream=false&amp;header=true&amp;height=365" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:390px;" allowTransparency="true"></iframe><br><a href="https://twitter.com/mustangsdaily" class="twitter-follow-button" data-show-count="false">Follow @mustangsdaily</a>
+<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script></center></div>
+		 </div>   
+
+
+</div></div>  
+
+<div id="front-popular" class="clearfloat">
+
+<div id="recentpost" class="clearfloat">
+<h3>Recent Comments</h3><ul id="recentcomments"><li class="recentcomments">Taylor on <a href="http://mustangsdaily.com/blog/2011/11/09/ford-responds-to-nhtsas-investigation-of-the-mustangs-mt82-6-speed-transmission/comment-page-1/#comment-28733">Ford responds to NHTSA&#8217;s investigation of the Mustang&#8217;s MT82 6-speed transmission</a></li><li class="recentcomments">Linda on <a href="http://mustangsdaily.com/blog/2011/11/30/spy-photos-2013-mustang-caught-in-gotta-have-it-green/comment-page-1/#comment-28604">Spy Photos: 2013 Mustang caught in Gotta Have It Green</a></li><li class="recentcomments">george on <a href="http://mustangsdaily.com/blog/2012/02/08/this-is-the-2013-mustangs-new-automatic-shifter-with-selectshift/comment-page-1/#comment-28594">This is the 2013 Mustang&#8217;s new automatic shifter with SelectShift</a></li><li class="recentcomments">Charles Breau on <a href="http://mustangsdaily.com/blog/2010/10/01/j-mays-hints-at-all-new-very-cool-mustang-coming-in-2014/comment-page-1/#comment-28385">J Mays hints at all-new &#8220;very cool Mustang&#8221; coming in 2014</a></li><li class="recentcomments">Steve on <a href="http://mustangsdaily.com/blog/2012/02/08/this-is-the-2013-mustangs-new-automatic-shifter-with-selectshift/comment-page-1/#comment-28330">This is the 2013 Mustang&#8217;s new automatic shifter with SelectShift</a></li></ul></div> 		
+
+<div id="mostcommented" class="clearfloat">
+<h3>Most Commented</h3>
+<ul> 	<li><a href="http://mustangsdaily.com/blog/2011/04/19/how-one-lucky-mustang-enthusiast-bought-boss-302-0001/" title="How one lucky Mustang enthusiast bought Boss 302 #0001">How one lucky Mustang enthusiast bought Boss 302 #0001</a></li> 	 	<li><a href="http://mustangsdaily.com/blog/2011/06/09/2014-mustang-gets-rendered-new-details-revealed/" title="2014 Mustang gets rendered, new details revealed">2014 Mustang gets rendered, new details revealed</a></li> 	 	<li><a href="http://mustangsdaily.com/blog/2011/07/06/refreshed-mustang-coming-in-2013-next-generation-to-be-2015-model/" title="Refreshed Mustang coming in 2013, next generation to be 2015 model">Refreshed Mustang coming in 2013, next generation to be 2015 model</a></li> 	 	<li><a href="http://mustangsdaily.com/blog/2011/08/07/nhtsa-opens-investigation-into-the-2011-mustangs-transmission-problems/" title="NHTSA opens investigation into the 2011 Mustang's transmission problems">NHTSA opens investigation into the 2011 Mustang's transmission problems</a></li> 	 	<li><a href="http://mustangsdaily.com/blog/2011/12/20/nhtsa-drops-investigation-of-2011-mustangs-6-speed-mt-82-transmission/" title="NHTSA drops investigation of 2011+ Mustang's 6-speed MT-82 transmission">NHTSA drops investigation of 2011+ Mustang's 6-speed MT-82 transmission</a></li> 	  
+</ul>
+
+ 
+</div>
+
+<div id="recent_comments" class="clearfloat">
+<h3>Most Viewed</h3>
+<ul>
+   <li><a href="http://mustangsdaily.com/blog/2011/04/06/shelby-to-unveil-800-horsepower-2012-gt500-super-snake-at-new-york-auto-show/"  title="Shelby to unveil 800 horsepower 2012 GT500 Super Snake at New York Auto Show">Shelby to unveil 800 horsepower 2012 GT500 Super Snake at New York Auto Show</a> - 85,535 views</li><li><a href="http://mustangsdaily.com/blog/2011/04/19/how-one-lucky-mustang-enthusiast-bought-boss-302-0001/"  title="How one lucky Mustang enthusiast bought Boss 302 #0001">How one lucky Mustang enthusiast bought Boss 302 #0001</a> - 63,248 views</li><li><a href="http://mustangsdaily.com/blog/2011/03/24/2013-mustang-mach-1-rendered/"  title="2013 Mustang Mach 1 rendered">2013 Mustang Mach 1 rendered</a> - 48,271 views</li><li><a href="http://mustangsdaily.com/blog/2010/11/29/2013-mustang-boss-302-design-and-colors-revealed-on-speed-tv/"  title="2013 Mustang Boss 302 design and colors revealed on SPEED TV">2013 Mustang Boss 302 design and colors revealed on SPEED TV</a> - 46,036 views</li><li><a href="http://mustangsdaily.com/blog/2011/07/06/refreshed-mustang-coming-in-2013-next-generation-to-be-2015-model/"  title="Refreshed Mustang coming in 2013, next generation to be 2015 model">Refreshed Mustang coming in 2013, next generation to be 2015 model</a> - 38,481 views</li></ul>
+
+
+ 
+</div>
+</div>
+
+<div id="footer" align="center">  Copyright Â© 2010-2011 MustangsDaily.com. Content may not be published, posted or used without permission.<br>This site is not authorized or endorsed by the Ford Motor Company and is not affiliated with the Ford Motor Company or its related companies in any way.<br>FordÂ® is a registered trademark of the Ford Motor Company.
+
+<!-- 58 queries. 1.349 seconds. -->
+
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31093-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script></body>
+</html>
+<!-- Dynamic Page Served (once) in 1.349 seconds -->
+<!-- Cached page served by WP-Cache -->
+
+
+
+WARC/1.0
+WARC-Type: response
+WARC-Date: 2012-02-12T11:17:02Z
+WARC-TREC-ID: clueweb12-0000tw-49-00186
+WARC-IP-Address: 98.142.216.137
+WARC-Payload-Digest: sha1:AP2QJ3TFGUVQ3VMUN2VB2NAJ6AKKWDHX
+WARC-Target-URI: http://olderwomansexwebcams.alldatingblogs.net/2012/2/sex-personals-norwalk-usa.html
+WARC-Record-ID: <urn:uuid:0019505e-52c4-4c40-a757-5faee0dbd31b>
+Content-Type: application/http; msgtype=response
+Content-Length: 6354
+
+HTTP/1.1 200 OK
+Date: Sun, 12 Feb 2012 11:17:02 GMT
+Server: Apache
+Last-Modified: Sun, 12 Feb 2012 03:28:38 GMT
+ETag: "215cb9c-17d6-f523c580"
+Accept-Ranges: bytes
+Content-Length: 6102
+Connection: close
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+  <meta content='true' name='MSSmartTagsPreventParsing'/>
+  <meta content='blogger' name='generator'/>
+  <link rel="alternate" type="application/atom+xml" href="http://olderwomansexwebcams.alldatingblogs.net/atom.xml" title="Are you interested in sex personals norwalk usa? - Atom" />
+  <link rel="alternate" type="application/rss+xml" href="http://olderwomansexwebcams.alldatingblogs.net/rss.xml" title="Are you interested in sex personals norwalk usa? - RSS" />
+
+  <title>Are you interested in sex personals norwalk usa?: Older woman sex webcams</title>
+  <meta name="keywords" content="sex personals norwalk usa" />
+  <meta name="description" content="If you are looking for sex personals norwalk usa why not to watch Jasmine? Jasmine said:&quot;I am looking for an emotionally and financially stable person. because i'm just a simple friend too.&quot;" />
+  <link rel="stylesheet" style="text/css" href="http://www.alldatingblogs.net/css/ochre-theme.css" />
+
+</head>
+
+<body>      
+<div id="space-for-ie"></div> 
+
+  <div id='outer-wrapper'><div id='wrap2'>
+
+    <div id='header-wrapper'>
+      <div class='header section' id='header'><div class='widget Header' id='Header1'>
+    
+    <div id='header-inner'>
+      <div class='titlewrapper'>
+        <h1 class='title'><a href='http://olderwomansexwebcams.alldatingblogs.net/'>
+		 Older woman sex webcams
+		</a></h1>
+      </div>
+      <div class='descriptionwrapper'>
+        <p class='description'><span>My collection of nasty girls at web cam with xxx adult web cam nude girls.</span></p>
+      </div>
+    </div>
+  
+</div></div></div>
+
+    <div id='content-wrapper'>
+
+      <div id='crosscol-wrapper' style='text-align:center'>
+        <div class='crosscol section' id='crosscol'></div>
+      </div>
+
+      <div id='main-wrapper'>
+        <div class='main section' id='main'><div class='widget Blog' id='Blog1'>
+  
+  <div class='blog-posts'>
+
+  <h2 class='date-header'>Sunday, February 12, 2012</h2>
+      
+  <div class='post uncustomized-post-template'><a name='post-304'></a>
+    
+    <h3 class='post-title'>
+     <a href='http://olderwomansexwebcams.alldatingblogs.net/2012/2/sex-personals-norwalk-usa.html'>Are you interested in sex personals norwalk usa?</a>
+    </h3>
+ 
+    <div class='post-header-line-1'></div>
+    <div class='post-body'>
+      <a href="http://www.alldatingblogs.net/l/g0212/se43/"><img src="http://www.alldatingblogs.net/uploads/0212/sex-personals-norwalk-usa.jpg" alt="adult" width="300" height="181" /></a><p>hi there, it's Jasmine.   lol I am an open person and love to talk and make people laugh.  I am looking for that guy to sweep me off my feet.   I like to be straight forward, no matter what the topic of discussion is!  I m carrie summer, love swimming,camping, fishing and meeting new people  I like children and want some of my own some day!</p><p><a href="http://www.alldatingblogs.net/l/g0212/se43/">Do you know that adultfriendfinder has more Norwalk personals than any other site? Get your women online now!</a></p>
+     <div style="clear:both; padding-bottom:0.25em"></div>
+
+	 
+     
+	 <div style='clear: both;'></div>
+    </div>
+    <div class='post-footer'>
+    <p class='post-footer-line post-footer-line-1'>
+     <span class='post-author'>
+      Posted by Dominic
+     </span>
+     <span class='post-timestamp'> at <a class='timestamp-link' href='http://olderwomansexwebcams.alldatingblogs.net/2012/2/sex-personals-norwalk-usa.html' title='permanent link'>6:28 AM</a></span>
+     <span title="Email Post" class="email-post-icon">&nbsp;</span>
+    </p>
+
+    <p class='post-footer-line post-footer-line-2'>
+     <span class='post-labels'></span>
+    </p>
+
+    <p class='post-footer-line post-footer-line-3'></p>
+   </div>
+  </div>
+
+  <div class='comments' id='comments'>
+   <a name='comments'></a>
+   
+   <h4>0 comments:</h4>
+
+	
+
+    <p class='comment-footer'>
+      <a href='http://www.alldatingblogs.net/post.php?blog=olderwomansexwebcams&amp;post=http%3A%2F%2Folderwomansexwebcams.alldatingblogs.net%2F2012%2F2%2Fsex-personals-norwalk-usa.html'>Post a Comment</a>
+    </p>
+
+   </div>
+  </div>
+  
+  <div class='clear'></div>
+  <div class='post-feeds'>
+    <div class='feed-links'> Subscribe to:
+  
+     <a class='feed-link' title="Are you interested in sex personals norwalk usa? Atom Feed" href='http://olderwomansexwebcams.alldatingblogs.net/atom.xml' type='application/atom+xml'>Posts (Atom)</a>
+  
+    </div>
+  </div>
+
+</div></div></div>
+
+<div id='sidebar-wrapper'>
+ <div class='sidebar section' id='sidebar'>
+
+ <div class='widget Posts' id='Posts1'>
+
+ <h2>Previous Posts</h2>
+ <div class='widget-content'>
+  <ul>
+	   <li><a href='http://olderwomansexwebcams.alldatingblogs.net/2012/2/live-sex-web-cams-in-el-cajon-california.html'>Looking for live sex web cams in el cajon california?</a></li>
+
+   <li><a href='http://olderwomansexwebcams.alldatingblogs.net/2012/1/online-dating-site-brighton-ny-usa.html'>Callie And Online Dating Site Brighton Ny Usa!</a></li>
+
+   <li><a href='http://olderwomansexwebcams.alldatingblogs.net/2012/1/live-web-cam-sex-chat-blue-springs.html'>Live web cam sex chat blue springs</a></li>
+
+
+  </ul>
+  <div class='clear'></div>
+  <span class='widget-item-control'>
+  </span>
+  <div class='clear'>&nbsp;</div>
+
+ </div>
+</div> 
+
+</div></div>
+
+<!-- spacer for skins that want sidebar and main to be the same height-->
+<div class='clear'>&#160;</div>
+</div> <!-- end content-wrapper -->
+
+  <div id='footer-wrapper'>
+   <div class='footer section' id='footer'><div class='widget Text' id='Text2'>
+  
+  <div class='widget-content'>
+   <p><a href="http://www.alldatingblogs.net/">Home</a> Copyright &copy; 2012 Alldatingblogs.net </p>
+  </div>
+  
+</div></div></div>
+</div></div> <!-- end outer-wrapper -->
+
+</body>
+</html>
