@@ -147,8 +147,8 @@ if (str(options.folder) != "None"):
     index2=0
     pom_parse=""
     ind=0
-    url =[]
-    file_parse=[]
+    url =""
+    file_parse=""
     pom_file=""
     pom_file2=""
     for hh in range(0,len(FileList)):
@@ -286,14 +286,14 @@ if (str(options.folder) != "None"):
                     pom_file=moje
                     index2=pom_file.find(":")
                     pom_file2=pom_file[index2:]
-                    file_parse.append(pom_file2)
+                    file_parse=pom_file2
                     index2=0
                     pom_file=""
                     pom_file2=""
                 if (moje.find("Target-URI") != -1):
                     index2=moje.find("Target-URI") 
                     pom_file2=moje[index2:]
-                    url.append(pom_file2)
+                    url=pom_file2
                     index2=0
                     pom_file2=""
         
@@ -314,7 +314,7 @@ else:
     pom=""
     pom_list=[]
     g=""
-    slov=dict()
+    
     index2=0
     pom_parse=""
     ind=0
@@ -428,6 +428,7 @@ else:
             subor.write(cest)
             subor.close()
             
+            
             #zavolam nastroj na indexaciu mantee
             try:
                 subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c',   str(os.getcwd())+"/"+"vert.korp" ])
@@ -435,6 +436,8 @@ else:
                 sys.stderr.write("Error in encodevert\n")
                 os.remove("vert.korp")
                 sys.exit(1)
+            
+            
             subor.close()
             #vymazem nepotrebny korpus subor
             os.remove("vert.korp")
@@ -454,14 +457,16 @@ else:
                     pom_file=moje
                     index2=pom_file.find(":")
                     pom_file2=pom_file[index2:]
-                    file_parse.append(pom_file2)
+                    file_parse=pom_file2
+                    file_parse=file_parse[2:len(file_parse)-2]
                     index2=0
                     pom_file=""
                     pom_file2=""
             if (moje.find("Target-URI") != -1):
                     index2=moje.find("Target-URI") 
                     pom_file2=moje[index2:]
-                    url.append(pom_file2)
+                    url=pom_file2
+                    
                     index2=0
                     pom_file2=""
         

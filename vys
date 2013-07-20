@@ -1,0 +1,68 @@
+PATH  /home/martin/Reasearch/git/clueWeb/OLE/test/clueweb12-0000tw-49-00000
+VERTICAL /home/martin/Reasearch/git/clueWeb/OLE/test/clueweb12-0000tw-49-00000/clueweb12-0000tw-49-00000
+ENCODING iso8859-2
+INFO "clueweb12-0000tw-49-00000"
+
+ATTRIBUTE word {
+    TYPE "FD_FBD"
+}
+
+ATTRIBUTE lemma {
+   TYPE "FD_FBD"
+}
+
+ATTRIBUTE tag {
+   TYPE "FD_FBD"
+}
+
+PATH  /home/martin/Reasearch/git/clueWeb/OLE/test/clueweb12-0000tw-49-00083
+VERTICAL /home/martin/Reasearch/git/clueWeb/OLE/test/clueweb12-0000tw-49-00083/clueweb12-0000tw-49-00083
+ENCODING iso8859-2
+INFO "clueweb12-0000tw-49-00083"
+
+ATTRIBUTE word {
+    TYPE "FD_FBD"
+}
+
+ATTRIBUTE lemma {
+   TYPE "FD_FBD"
+}
+
+ATTRIBUTE tag {
+   TYPE "FD_FBD"
+}
+
+PATH  /home/martin/Reasearch/git/clueWeb/OLE/test/clueweb12-0000tw-49-00084
+VERTICAL /home/martin/Reasearch/git/clueWeb/OLE/test/clueweb12-0000tw-49-00084/clueweb12-0000tw-49-00084
+ENCODING iso8859-2
+INFO "clueweb12-0000tw-49-00084"
+
+ATTRIBUTE word {
+    TYPE "FD_FBD"
+}
+
+ATTRIBUTE lemma {
+   TYPE "FD_FBD"
+}
+
+ATTRIBUTE tag {
+   TYPE "FD_FBD"
+}
+
+PATH  /home/martin/Reasearch/git/clueWeb/OLE/test/clueweb12-0000tw-49-00186
+VERTICAL /home/martin/Reasearch/git/clueWeb/OLE/test/clueweb12-0000tw-49-00186/clueweb12-0000tw-49-00186
+ENCODING iso8859-2
+INFO "clueweb12-0000tw-49-00186"
+
+ATTRIBUTE word {
+    TYPE "FD_FBD"
+}
+
+ATTRIBUTE lemma {
+   TYPE "FD_FBD"
+}
+
+ATTRIBUTE tag {
+   TYPE "FD_FBD"
+}
+
