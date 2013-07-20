@@ -265,7 +265,7 @@ if (str(options.folder) != "None"):
    
   
     
-                        print "Indexuje subor",suborList[i]
+                       # print "Indexuje subor",suborList[i]
                             #vytvorim si subor pre definiciu korpusu
                         try:
                             subor = codecs.open("vert.korp", "w")
@@ -281,7 +281,7 @@ if (str(options.folder) != "None"):
         
 
        # print moje
-        
+                        """
         #zavolam nastroj na indexaciu mantee
                         try:
                             subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c',   str(os.getcwd())+"/"+"vert.korp" ])
@@ -289,7 +289,7 @@ if (str(options.folder) != "None"):
                             sys.stderr.write("Error in encodevert\n")
                             os.remove("vert.korp")
                             sys.exit(1)
-        
+                        """
                         subor.close()
             #vymazem nepotrebny korpus subor
                         os.remove("vert.korp")
@@ -447,16 +447,16 @@ else:
 
                     #pre HTML zaznam pouzijem nastroj justext alebo xml
                         if (i % 2 == 1):
-
-            
-                            paragraphs = justext.justext(slov[i].encode("utf-8"), justext.get_stoplist('English'))
-                            for paragraph in paragraphs:
-                                p.write(paragraph['text'].encode("UTF-8"))
+                            print type(slov[i])
+                            print slov[i]
+                           # paragraphs = justext.justext(slov[i].encode("utf-8"), justext.get_stoplist('English'))
+                           # for paragraph in paragraphs:
+                               # p.write(paragraph['text'].encode("UTF-8"))
                 
                                 #doplnim potrebne znacky
-                                p.write("\r\n")
-                            p.write("\r\n\r\n")
-                            p.close()
+                            #    p.write("\r\n")
+                          #  p.write("\r\n\r\n")
+                          #  p.close()
 
                         #WARC hlavicky zapisem
                         if (i % 2 == 0):
@@ -489,7 +489,7 @@ else:
                         #vysledok zapisem do korpus suboru pre nastroj mantee
                         subor.write(moje)
         
-        
+                        """
                         #zavolam nastroj na indexaciu mantee
                         try:
                             subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c',   str(os.getcwd())+"/"+"vert.korp" ])
@@ -497,7 +497,7 @@ else:
                             sys.stderr.write("Error in encodevert\n")
                             os.remove("vert.korp")
                             sys.exit(1)
-        
+                        """
                         subor.close()
                         #vymazem nepotrebny korpus subor
                         os.remove("vert.korp")
