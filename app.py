@@ -151,23 +151,28 @@ if (str(options.folder) != "None"):
     file_parse=""
     pom_file=""
     pom_file2=""
-    for hh in range(0,len(FileList)):
-        
-        print "*** Prave spracovavom",FileList[hh],"***\n"
-        #odzipujem subor
+    for hh in range(0,len(fileList)):
         try:
-            subprocess.call(['gunzip', os.path.abspath(str(FileList[hh]))])
+            subprocess.check_call(['gunzip', os.path.abspath(str(fileList[hh]))])
+            
         except: 
-            print "Chyba pri unzip suboru\n",str(os.path.abspath(str(FileList[hh])))
-            FileList.remove(FileList[hh])
+            print "Chyba pri unzip suboru\n",str(os.path.abspath(str(fileList[hh])))
+            fileList.remove(fileList[hh])
+    
+   
+    
+    for hh in range(0,len(fileList)):
+        
+        print "*** Prave spracovavom",fileList[hh],"***\n"
+        #odzipujem subor
+       
         index=0
         zoznam=[]
         url=[]
-        #zistim nazov suboru
-        index=str(os.path.basename(FileList[hh])).find(".")
+        index=str((fileList[hh])).rfind(".")
+        
         file_name=""
-        file_name=(str(FileList[hh]))[:index]
-        file_name=file_name+".warc"
+        file_name=(str(fileList[hh]))[:index]
         html=""
         pom=""
         
@@ -176,13 +181,13 @@ if (str(options.folder) != "None"):
         folder_name=""
         index=0
         #zistim cestu
-        index=str(os.path.basename(FileList[hh])).find(".")
-        folder_name=str(os.path.basename(FileList[hh]))[:index]
+        index=str(os.path.basename(fileList[hh])).find(".")
+        folder_name=str(os.path.basename(fileList[hh]))[:index]
   
         pathname = os.path.dirname(sys.argv[0])        
-        if (str(FileList[hh]).find("/") == -1):
-            FileList[hh]=str(FileList[hh])
-            FileList[hh]=str(os.getcwd())+ "/"+ FileList[hh]
+        if (str(fileList[hh]).find("/") == -1):
+            fileList[hh]=str(fileList[hh])
+            fileList[hh]=str(os.getcwd())+ "/"+ fileList[hh]
     
     
         doc=0
@@ -199,7 +204,7 @@ if (str(options.folder) != "None"):
             
             
         #otvorim odzipovany subor pre citanie
-        f= codecs.open(FileList[hh],"rb","ISO8859-15")
+        f= codecs.open(file_name,"rb","ISO8859-15")
     
          #prehladavam cele telo
         while(0==0):
@@ -250,7 +255,7 @@ if (str(options.folder) != "None"):
             
             
                 #indexacia vytvorim si subor pre definiciu korpusu
-            
+                cest=""
                 try:
                     subor = codecs.open("vert.korp", "w")
                 except IOError:
@@ -258,7 +263,8 @@ if (str(options.folder) != "None"):
                 cest="PATH  "+    os.path.abspath(str(options.output))+"/"+folder_name+"/"+str(file_parse)+"\n" +     "VERTICAL " + os.path.abspath(str(options.output))+"/"+folder_name+"/"+str(file_parse)+"/"+str(file_parse) + "\nENCODING iso8859-2\n" + "INFO "+   "\""+ file_parse +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "    TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    +  "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}\n"
                 subor.write(cest)
                 subor.close()
-            
+                print cest
+                
                 #zavolam nastroj na indexaciu mantee
                 try:
                     subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c',   str(os.getcwd())+"/"+"vert.korp" ])
@@ -266,6 +272,7 @@ if (str(options.folder) != "None"):
                     sys.stderr.write("Error in encodevert\n")
                     os.remove("vert.korp")
                     sys.exit(1)
+                
                 subor.close()
                 #vymazem nepotrebny korpus subor
                 os.remove("vert.korp")
@@ -285,7 +292,7 @@ if (str(options.folder) != "None"):
                 if (moje.find("TREC-ID") != -1):
                     pom_file=moje
                     index2=pom_file.find(":")
-                    pom_file2=pom_file[index2:]
+                    pom_file2=pom_file[index2+2:len(pom_file)-2]
                     file_parse=pom_file2
                     index2=0
                     pom_file=""
@@ -324,7 +331,7 @@ else:
     pom_file2=""
     #odzipujem subor
     try:
-        subprocess.call(['gunzip', os.path.abspath(str(options.file))])
+        subprocess.check_call(['gunzip', os.path.abspath(str(options.file))])
     except: 
         print "Chyba pri odzipovani",options.file
         sys.exit(1)
