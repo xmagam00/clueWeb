@@ -151,15 +151,27 @@ if (str(options.folder) != "None"):
     file_parse=""
     pom_file=""
     pom_file2=""
+    n=[]
+    nn=0
+    pomicek=0
     for hh in range(0,len(fileList)):
+         
+        
         try:
             subprocess.check_call(['gunzip', os.path.abspath(str(fileList[hh]))])
             
         except: 
-            print "Chyba pri unzip suboru\n",str(os.path.abspath(str(fileList[hh])))
-            fileList.remove(fileList[hh])
+            n.append(nn)
+            #fileList.remove(fileList[n])
+            #print "Chyba pri unzip suboru\n",str(os.path.abspath(str(fileList[hh])))
+        nn=nn+1
+            
     
-   
+    
+    for i in range(0,len(n)):
+        pomicek=n[i]
+        fileList.remove(fileList[pomicek])
+    
     
     for hh in range(0,len(fileList)):
         
@@ -263,8 +275,8 @@ if (str(options.folder) != "None"):
                 cest="PATH  "+    os.path.abspath(str(options.output))+"/"+folder_name+"/"+str(file_parse)+"\n" +     "VERTICAL " + os.path.abspath(str(options.output))+"/"+folder_name+"/"+str(file_parse)+"/"+str(file_parse) + "\nENCODING iso8859-2\n" + "INFO "+   "\""+ file_parse +"\"" + "\n"   + "\n" + "ATTRIBUTE word {\n" + "    TYPE \"FD_FBD\"\n"    + "}\n" + "\n" + "ATTRIBUTE lemma {\n" + "   TYPE \"FD_FBD\"\n"    +  "}\n" + "\n" + "ATTRIBUTE tag {\n" + "   TYPE \"FD_FBD\"\n" + "}\n"
                 subor.write(cest)
                 subor.close()
-                print cest
                 
+                """
                 #zavolam nastroj na indexaciu mantee
                 try:
                     subprocess.call(['/mnt/minerva1/nlp/local64/bin/encodevert','-c',   str(os.getcwd())+"/"+"vert.korp" ])
@@ -272,7 +284,7 @@ if (str(options.folder) != "None"):
                     sys.stderr.write("Error in encodevert\n")
                     os.remove("vert.korp")
                     sys.exit(1)
-                
+                """
                 subor.close()
                 #vymazem nepotrebny korpus subor
                 os.remove("vert.korp")
@@ -339,7 +351,7 @@ else:
     zoznam=[]
     
     #zistim nazov suboru
-    index=str(os.path.basename(options.file)).find(".")
+    index=str(os.path.basename(options.file)).rfind(".")
     file_name=""
     file_name=(str(options.file))[:index]
     file_name=file_name+".warc"
@@ -352,7 +364,7 @@ else:
     folder_name=""
     index=0
     #zistim cestu
-    index=str(os.path.basename(options.file)).find(".")
+    index=str(os.path.basename(options.file)).rfind(".")
     folder_name=str(os.path.basename(options.file))[:index]
   
     pathname = os.path.dirname(sys.argv[0])        
